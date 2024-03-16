@@ -1,5 +1,5 @@
 from telethon import events
-from scenario import telethn
+from JARVISHUB import telethn
 
 
 def register(**args):
