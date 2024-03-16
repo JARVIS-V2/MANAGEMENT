@@ -19,10 +19,10 @@ from pyrogram.types import (
 )
 from search_engine_parser import GoogleSearch
 
-from scenario import BOT_USERNAME, OWNER_ID, pgram, arq
-from scenario.utils.pluginhelpers import convert_seconds_to_minutes as time_convert
-from scenario.utils.pluginhelpers import fetch
-from scenario import BOT_USERNAME
+from JARVISHUB import BOT_USERNAME, OWNER_ID, pgram, arq
+from JARVISHUB.utils.pluginhelpers import convert_seconds_to_minutes as time_convert
+from JARVISHUB.utils.pluginhelpers import fetch
+from JARVISHUB import BOT_USERNAME
 
 SUDOERS = OWNER_ID
 app = pgram
@@ -75,7 +75,7 @@ async def alive_function(answers):
     )
 
     msg = f"""
-**[Scenario](https://github.com/TeamScenario/Scenario):**
+**[JARVISHUB](https://github.com/TeamJARVISHUB/JARVISHUB):**
 **MainBot:** `{bot_state}`
 **UserBot:** `Alive`
 **Python:** `3.9`
