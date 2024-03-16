@@ -6,12 +6,12 @@ import time
 import re
 import sys
 import traceback
-import scenario.modules.sql.users_sql as sql
+import JARVISHUB.modules.sql.users_sql as sql
 
 
 from sys import argv
 from typing import Optional
-from scenario import (
+from JARVISHUB import (
     ALLOW_EXCL,
     CERT_PATH,
     DONATION_LINK,
@@ -28,7 +28,7 @@ from scenario import (
     HELP_IMG,
     UPDATES_CHANNEL,
     GROUP_START_IMG,
-    scenario_pic,
+    JARVISHUB_pic,
     dispatcher,
     StartTime,
     telethn,
@@ -40,12 +40,12 @@ from scenario import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from scenario.events import register
-from scenario.modules import ALL_MODULES
-from scenario.modules.helper_funcs.chat_status import is_user_admin
-from scenario.modules.helper_funcs.alternate import typing_action
-from scenario.modules.helper_funcs.misc import paginate_modules
-from scenario.modules.disable import DisableAbleCommandHandler
+from JARVISHUB.events import register
+from JARVISHUB.modules import ALL_MODULES
+from JARVISHUB.modules.helper_funcs.chat_status import is_user_admin
+from JARVISHUB.modules.helper_funcs.alternate import typing_action
+from JARVISHUB.modules.helper_funcs.misc import paginate_modules
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -70,13 +70,13 @@ from telethon import Button, events
 
 @telethn.on(events.NewMessage(pattern="/alive"))
 async def awake(event):
-  scenario = event.sender.first_name
-  scenario = "**♡ I,m scenario** \n\n"
-  scenario += "**♡ I'm Working With Awesome Speed**\n\n"
-  scenario += "**♡ Scenario: LATEST Version**\n\n"
-  scenario += "**♡ My Creator:** [TeamScenario](t.me/TeamScenario)\n\n"
-  scenario += "**♡ Python-Telegram-Bot: v13.7**\n\n"
-  scenario_BUTTON = [
+  JARVISHUB = event.sender.first_name
+  JARVISHUB = "**♡ I,m JARVISHUB** \n\n"
+  JARVISHUB += "**♡ I'm Working With Awesome Speed**\n\n"
+  JARVISHUB += "**♡ JARVISHUB: LATEST Version**\n\n"
+  JARVISHUB += "**♡ My Creator:** [JARVIS](https://t.me/JARVIS_V2)\n\n"
+  JARVISHUB += "**♡ Python-Telegram-Bot: v13.7**\n\n"
+  JARVISHUB_BUTTON = [
       [
           Button.url("Support", f"https://t.me/{SUPPORT_CHAT}"),
           Button.url("Updates", f"https://t.me/{UPDATES_CHANNEL}"),
@@ -84,9 +84,9 @@ async def awake(event):
   ]
   await telethn.send_file(
       event.chat_id,
-      scenario_pic,
-      caption = scenario,
-      buttons = scenario_BUTTON,
+      JARVISHUB_pic,
+      caption = JARVISHUB,
+      buttons = JARVISHUB_BUTTON,
   )
 
     
@@ -118,9 +118,9 @@ HELP_MSG = "Click the button below to get help menu in your pm."
 START_MSG = "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
     
 PM_START_TEXT = """
-────「 [Scenario](https://telegra.ph/file/7b8c52bd4c7b8b35ece20.jpg) 」────
+────「 [JARVIS](https://telegra.ph/file/7b8c52bd4c7b8b35ece20.jpg) 」────
 *Hola! {},*
-*I am {} Anime themed advance group management bot with a lot of Sexy Features.*
+*I am {}  advance group management bot with a lot of Sexy Features.*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 • *Uptime:* `{}`
 • `{}` *users, across* `{}` *chats.*
@@ -137,10 +137,10 @@ buttons = [
     [
                         InlineKeyboardButton(
                             text=f"⚓ ❄️ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ❄️ ⚓",
-                            url="https://t.me/ScenarioXbot?startgroup=true")
+                            url="https://t.me/JARVIS_MANAGER_ROBOT?startgroup=true")
                     ],
                    [
-                       InlineKeyboardButton(text="☘️ ᴀʙᴏᴜᴛ ☘️", callback_data="scenario_"),
+                       InlineKeyboardButton(text="☘️ ᴀʙᴏᴜᴛ ☘️", callback_data="JARVISHUB_"),
                        InlineKeyboardButton(text="⚔️ ɪɴʟɪɴᴇ ⚔️", switch_inline_query_current_chat=""),
                      ],
                     [                  
@@ -183,7 +183,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("scenario.modules." + module_name)
+    imported_module = importlib.import_module("JARVISHUB.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -331,7 +331,7 @@ def error_handler(update, context):
     # Finally, send the message
     context.bot.send_message(chat_id=OWNER_ID, text=message, parse_mode=ParseMode.HTML)
 
-def scenario_all_callback(update, context):
+def JARVISHUB_all_callback(update, context):
     first_name = update.effective_user.first_name
     uptime = get_readable_time((time.time() - StartTime))
     query = update.callback_query
@@ -348,12 +348,12 @@ def scenario_all_callback(update, context):
                 timeout=60,
             )
 
-def scenario_about_callback(update, context):
+def JARVISHUB_about_callback(update, context):
     query = update.callback_query
     first_name = update.effective_user.first_name
-    if query.data == "scenario_":
+    if query.data == "JARVISHUB_":
         query.message.edit_text(
-            text=f"Hello dear {first_name}, My name is Scenario. A Powerful Telegram Group Management Bot.\n My developer - @TeamScenario\n\nIf you have any Question, You can join our support chat. \nMy developer will help you. \nCheck Link Below",
+            text=f"Hello dear {first_name}, My name is JARVIS. A Powerful Telegram Group Management Bot.\n My developer - @JARVIS_V2\n\nIf you have any Question, You can join our support chat. \nMy developer will help you. \nCheck Link Below",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -460,10 +460,10 @@ def help_button(update, context):
     except BadRequest:
         pass
 
-def scenario_callback_data(update, context):
+def JARVISHUB_callback_data(update, context):
     query = update.callback_query
     uptime = get_readable_time((time.time() - StartTime))
-    if query.data == "scenario_":
+    if query.data == "JARVISHUB_":
         query.message.edit_text(
             text="""CallBackQueriesData Here""",
             parse_mode=ParseMode.MARKDOWN,
@@ -471,12 +471,12 @@ def scenario_callback_data(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="[► Back ◄]", callback_data="scenario_back")
+                    InlineKeyboardButton(text="[► Back ◄]", callback_data="JARVISHUB_back")
                  ]
                 ]
             ),
         )
-    elif query.data == "scenario_back":
+    elif query.data == "JARVISHUB_back":
         first_name = update.effective_user.first_name
         query.message.edit_text(
                 PM_START_TEXT.format(
@@ -753,13 +753,13 @@ def main():
 
     settings_handler = DisableAbleCommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_", run_async=True)
-    all_modules_callback = CallbackQueryHandler(scenario_all_callback, pattern=r"all_cmds", run_async=True)
-    scenario_about_handler = CallbackQueryHandler(scenario_about_callback, pattern=r"scenario_", run_async=True)
-    data_callback_handler = CallbackQueryHandler(scenario_callback_data, pattern=r"scenario_", run_async=True)
+    all_modules_callback = CallbackQueryHandler(JARVISHUB_all_callback, pattern=r"all_cmds", run_async=True)
+    JARVISHUB_about_handler = CallbackQueryHandler(JARVISHUB_about_callback, pattern=r"JARVISHUB_", run_async=True)
+    data_callback_handler = CallbackQueryHandler(JARVISHUB_callback_data, pattern=r"JARVISHUB_", run_async=True)
     donate_handler = DisableAbleCommandHandler("donate", donate, run_async=True)
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats, run_async=True)
 
-    dispatcher.add_handler(scenario_about_handler)
+    dispatcher.add_handler(JARVISHUB_about_handler)
     dispatcher.add_handler(start_handler)
     dispatcher.add_handler(all_modules_callback)
     dispatcher.add_handler(help_handler)
@@ -782,7 +782,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info(f"scenario started, Using long polling. | BOT: [@{dispatcher.bot.username}]")
+        LOGGER.info(f"JARVISHUB started, Using long polling. | BOT: [@{dispatcher.bot.username}]")
         updater.start_polling(timeout=15, read_latency=4, drop_pending_updates=True, allowed_updates=Update.ALL_TYPES)
 
     if len(argv) not in (1, 3, 4):
