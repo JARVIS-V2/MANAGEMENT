@@ -3,9 +3,9 @@ from functools import wraps
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 from pyrogram.types import Message
 
-from scenario import DRAGONS
-from scenario.utils.pluginhelp import member_permissions
-from scenario import pgram
+from JARVISHUB import DRAGONS
+from JARVISHUB.utils.pluginhelp import member_permissions
+from JARVISHUB import pgram
 
 async def authorised(func, subFunc2, client, message, *args, **kwargs):
     chatID = message.chat.id
