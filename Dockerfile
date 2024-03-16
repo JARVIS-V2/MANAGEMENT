@@ -1,11 +1,13 @@
-# We're using Debian Slim Buster image
+# Use Debian Slim Buster image with Python 3.9.6
 FROM python:3.9.6-slim-buster
 
+# Set environment variable to prevent caching in pip
 ENV PIP_NO_CACHE_DIR 1
 
+# Remove EC2 mirror from apt sources.list
 RUN sed -i.bak 's/us-west-2\.ec2\.//' /etc/apt/sources.list
 
-# Installing Required Packages
+# Update and install required packages
 RUN apt update && apt upgrade -y && \
     apt install --no-install-recommends -y \
     debian-keyring \
@@ -61,19 +63,17 @@ RUN apt update && apt upgrade -y && \
     libopus-dev \
     && rm -rf /var/lib/apt/lists /var/cache/apt/archives /tmp
 
-# Pypi package Repo upgrade
-RUN apt-get install -y ffmpeg python3-pip curl
-RUN pip3 install --upgrade pip setuptools
+# Install ffmpeg and pip packages
+RUN apt-get install -y ffmpeg python3-pip curl && \
+    pip3 install --upgrade pip setuptools
 
-ENV PATH="/home/bot/bin:$PATH"
+# Set the working directory and copy the code
+RUN mkdir /JARVISHUB/
+COPY . /JARVISHUB
+WORKDIR /JARVISHUB
 
-# make directory
-RUN mkdir /scenario/
-COPY . /scenario
-WORKDIR /scenario
-
-# Install requirements
+# Install Python requirements
 RUN pip3 install -U -r requirements.txt
 
-# Starting Worker
-CMD ["python3","-m","scenario"]
+# Define the command to start the worker
+CMD ["python3", "-m", "JARVISHUB"]
