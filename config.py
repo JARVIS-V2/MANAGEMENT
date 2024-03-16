@@ -3,12 +3,12 @@ import os
 # Token from botfather
 TOKEN = os.environ.get("TOKEN", "")  # Get from BotFather
 
-# Make a new group then add @ScenarioXbot then send /id and fill id here.
-JOIN_LOGGER = os.environ.get("JOIN_LOGGER", "")  # Fill with the group ID after adding @ScenarioXbot and sending /id
+# Make a new group then add  then send /id and fill id here.
+JOIN_LOGGER = os.environ.get("JOIN_LOGGER", "-1002044893623")  # Fill with the group ID after adding @ScenarioXbot and sending /id
 
 # Bot owner's ID and username
-OWNER_ID = int(os.environ.get("OWNER_ID", "2142595466"))  # Fill with your Telegram user ID
-OWNER_USERNAME = os.environ.get("OWNER_USERNAME", "CoderX")  # Fill with your Telegram username
+OWNER_ID = int(os.environ.get("OWNER_ID", "7157587567"))  # Fill with your Telegram user ID
+OWNER_USERNAME = os.environ.get("OWNER_USERNAME", "JARVIS_V2")  # Fill with your Telegram username
 
 # Lists of user IDs for different roles
 DRAGONS = {int(x) for x in os.environ.get("DRAGONS", "").split()}  # Fill with user IDs for the 'DRAGONS' role
@@ -57,32 +57,32 @@ SPAMWATCH_API = os.environ.get("SPAMWATCH_API", "")  # Get from https://t.me/Spa
 # Bot details
 BOT_ID = int(os.environ.get("BOT_ID", None))  # Your bot's Telegram ID
 SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "")  # Your support chat group link
-SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", "")  # Your SpamWatch support chat link
+SPAMWATCH_SUPPORT_CHAT = os.environ.get("https://t.me/+9OC6BH29oo9kMDU1", "")  # Your SpamWatch support chat link
 BOT_USERNAME = os.environ.get("BOT_USERNAME", "")  # Your bot's username
 
 # Miscellaneous
 STRING_SESSION = os.environ.get("STRING_SESSION", None)  # Telethon Based String Session
-REPO = "TeamScenario/Scenario"  # GitHub repository
-DEVELOPER = "TeamScenario"  # Your developer/team name
+REPO = EMON"doraemon890/JARVIS-X-MANAGER"  # GitHub repository
+DEVELOPER = "JARVIS"  # Your developer/team name
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", "")  # Your Heroku app name
 HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "")  # Your Heroku API key
 UPSTREAM_BRANCH = os.environ.get("UPSTREAM_BRANCH", "")  # Your upstream branch
 UPSTREAM_REPO = os.environ.get("UPSTREAM_REPO", "")  # Your upstream repository
 ALLOW_CHATS = os.environ.get("ALLOW_CHATS", "")  # Allow chats
 BOT_NAME = os.environ.get("BOT_NAME", "")  # Your bot's name
-MONGO_DB = "scenario"  # MongoDB database name
+MONGO_DB = "jarvisxd45"  # MongoDB database name
 ARQ_API_URL = "https://arq.hamker.in"  # ARQ API URL
 GOOGLE_CHROME_BIN = "/usr/bin/google-chrome"  # Path to Google Chrome binary
 CHROME_DRIVER = "/usr/bin/chromedriver"  # Path to ChromeDriver
-SUDO_USERS = "2142595466"  # Superuser IDs
-WHITELIST_USERS = "2142595466"  # Whitelisted user IDs
+SUDO_USERS = "7059759820"  # Superuser IDs
+WHITELIST_USERS = "7059759820"  # Whitelisted user IDs
 BOT_API_URL = os.environ.get('BOT_API_URL', "https://api.telegram.org/bot")  # Bot API URL
-UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "TeamScenario")  # Your updates channel
+UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "JARVIS_X_SUPPORT")  # Your updates channel
 
 # Images
 HELP_IMG = os.environ.get("HELP_IMG", "")  # Help image URL
 GROUP_START_IMG = os.environ.get("GROUP_START_IMG", "")  # Group start image URL
-SCENARIO_PIC = os.environ.get("SCENARIO_PIC", "")  # Scenario image URL
+JARVISHUB_PIC = os.environ.get("JARVISHUB_PIC", "")  # JARVIS image URL
 
 # Configuration settings
 BL_CHATS = {int(x) for x in os.environ.get("BL_CHATS", "").split()}  # Blacklisted chat IDs
