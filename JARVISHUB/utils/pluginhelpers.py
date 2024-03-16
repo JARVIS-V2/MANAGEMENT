@@ -13,9 +13,9 @@ from pyrogram import Client
 from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import Chat, Message, User
 
-from scenario import OWNER_ID, SUPPORT_CHAT
-from scenario.utils.errors import split_limits
-from scenario import pgram
+from JARVISHUB import OWNER_ID, SUPPORT_CHAT
+from JARVISHUB.utils.errors import split_limits
+from JARVISHUB import pgram
 
 
 def get_user(message: Message, text: str) -> [int, str, None]:
