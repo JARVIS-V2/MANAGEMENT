@@ -3,7 +3,7 @@ import socket
 from asyncio import get_running_loop
 from functools import partial
 
-from scenario import aiohttpsession as session
+from JARVISHUB import aiohttpsession as session
 
 
 def _netcat(host, port, content):
