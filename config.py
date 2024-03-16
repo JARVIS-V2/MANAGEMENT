@@ -1,150 +1,98 @@
 import os
 
-"""
-Things to be noted you can fill values between empty "" 
-Example - JOIN_LOGGER = os.environ.get("EVENT_LOGS", "-100828822882")
-
-• If value is none there add "" to fill if you don't wanna fill add None
-
-• Some vars are already filled to help you no need to change them.
-"""
-
-
-# Token from botfather 
-TOKEN = os.environ.get("TOKEN", "")
+# Token from botfather
+TOKEN = os.environ.get("TOKEN", "")  # Get from BotFather
 
 # Make a new group then add @ScenarioXbot then send /id and fill id here.
-JOIN_LOGGER = os.environ.get("EVENT_LOGS", "")
+JOIN_LOGGER = os.environ.get("JOIN_LOGGER", "")  # Fill with the group ID after adding @ScenarioXbot and sending /id
 
-# only one # don't remove other one.
-OWNER_ID = int(os.environ.get("OWNER_ID", "2142595466", "fill_your_id_here_")) 
+# Bot owner's ID and username
+OWNER_ID = int(os.environ.get("OWNER_ID", "2142595466"))  # Fill with your Telegram user ID
+OWNER_USERNAME = os.environ.get("OWNER_USERNAME", "CoderX")  # Fill with your Telegram username
 
-# only one # don't remove other one.
-OWNER_USERNAME = os.environ.get("OWNER_USERNAME", "CoderX", "Your_username_here")
+# Lists of user IDs for different roles
+DRAGONS = {int(x) for x in os.environ.get("DRAGONS", "").split()}  # Fill with user IDs for the 'DRAGONS' role
+DEV_USERS = {int(x) for x in os.environ.get("DEV_USERS", "").split()}  # Fill with user IDs for the 'DEV_USERS' role
+DEMONS = {int(x) for x in os.environ.get("DEMONS", "").split()}  # Fill with user IDs for the 'DEMONS' role
+WOLVES = {int(x) for x in os.environ.get("WOLVES", "").split()}  # Fill with user IDs for the 'WOLVES' role
+TIGERS = {int(x) for x in os.environ.get("TIGERS", "").split()}  # Fill with user IDs for the 'TIGERS' role
 
-# can add multiple with spaces
-DRAGONS = {int(x) for x in os.environ.get("DRAGONS", "").split()}
+# Should profile pic of user be shown in /info command?
+INFOPIC = bool(os.environ.get("INFOPIC", True))
 
-# can add multiple with spaces
-DEV_USERS = {int(x) for x in os.environ.get("DEV_USERS", "").split()}
+# Group where event logs are sent
+EVENT_LOGS = os.environ.get("EVENT_LOGS", None)  # Fill with the group ID for event logs
 
-# can add multiple with spaces
-DEMONS = {int(x) for x in os.environ.get("DEMONS", "").split()} 
+# Group where error logs are sent
+ERROR_LOGS = os.environ.get("ERROR_LOGS", None)  # Fill with the group ID for error logs
 
-# can add multiple with spaces
-WOLVES = {int(x) for x in os.environ.get("WOLVES", "").split()}
-
-# can add multiple with spaces
-TIGERS = {int(x) for x in os.environ.get("TIGERS", "").split()}
-
-# Should I show profile pic of user in /info command? 
-# default value is true
-INFOPIC = bool(os.environ.get("INFOPIC", True)) or "https://telegra.ph/file/a9ec99487ecd550460309.jpg"
-
-# Make a new group then add @ScenarioXbot then send /id and fill id here.
-EVENT_LOGS = os.environ.get("EVENT_LOGS", None)
-
-# Make a new group then add @ScenarioXbot then send /id and fill id here.
-ERROR_LOGS = os.environ.get("ERROR_LOGS", None)
-
-# Don't touch if you don't know.
+# Whether the bot uses webhook or not
 WEBHOOK = bool(os.environ.get("WEBHOOK", False))
 
-# heroku app url
-URL = os.environ.get("URL", "")  # If You Deploy On Heroku. [URL PERTEN:- https://{appname}.herokuapp.com/ || EXP:- https://scenario.herokuapp.com/]
-PORT = int(os.environ.get("PORT", 8443))
+# Heroku app details
+URL = os.environ.get("URL", "")  # Heroku app URL
+PORT = int(os.environ.get("PORT", 8443))  # Heroku app port
+CERT_PATH = os.environ.get("CERT_PATH")  # Path to SSL certificate (if applicable)
 
-CERT_PATH = os.environ.get("CERT_PATH")
+# Bot owner's API credentials
+API_ID = os.environ.get("API_ID", "")  # Get from https://my.telegram.org/apps
+API_HASH = os.environ.get("API_HASH", "")  # Get from https://my.telegram.org/apps
 
-# Bot Owner's API_ID (From:- https://my.telegram.org/apps)
-API_ID = os.environ.get("API_ID", "")
+# Database URL
+DB_URL = os.environ.get("DATABASE_URL", "")  # Database connection URL
 
-# Bot Owner's API_HASH (From:- https://my.telegram.org/apps)
-API_HASH = os.environ.get("API_HASH", "")
+# Donation link
+DONATION_LINK = os.environ.get("DONATION_LINK", "")  # Your donation link
 
-# Any SQL Database Link (RECOMMENDED:- PostgreSQL & https://www.elephantsql.com)
-DB_URL = os.environ.get("DATABASE_URL", "") 
+# APIs and keys
+WALL_API = os.environ.get("WALL_API", None)  # Get from https://wall.alphacoders.com/api.php
+REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", "")  # Get from https://www.remove.bg/
+OPENWEATHERMAP_ID = os.environ.get("OPENWEATHERMAP_ID", "")  # Get from https://openweathermap.org/api
+GENIUS_API_TOKEN = os.environ.get("GENIUS_API_TOKEN", None)  # Get from http://genius.com/api-clients
+MONGO_DB_URL = os.environ.get("MONGO_DB_URL", "")  # Your MongoDB URL
+REDIS_URL = os.environ.get("REDIS_URL", "")  # Your Redis URL
+YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", "")  # Your YouTube API key
+SPAMWATCH_API = os.environ.get("SPAMWATCH_API", "")  # Get from https://t.me/SpamWatchBot
 
-# Don't touch
-DB_URL = DB_URL.replace(
-"postgres://", "postgresql://", 1
-)  # rest of connection code using the connection string `uri`
+# Bot details
+BOT_ID = int(os.environ.get("BOT_ID", None))  # Your bot's Telegram ID
+SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "")  # Your support chat group link
+SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", "")  # Your SpamWatch support chat link
+BOT_USERNAME = os.environ.get("BOT_USERNAME", "")  # Your bot's username
 
-# Donation Link (ANY)
-DONATION_LINK = os.environ.get("https://t.me/i_14344")
+# Miscellaneous
+STRING_SESSION = os.environ.get("STRING_SESSION", None)  # Telethon Based String Session
+REPO = "TeamScenario/Scenario"  # GitHub repository
+DEVELOPER = "TeamScenario"  # Your developer/team name
+HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", "")  # Your Heroku app name
+HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "")  # Your Heroku API key
+UPSTREAM_BRANCH = os.environ.get("UPSTREAM_BRANCH", "")  # Your upstream branch
+UPSTREAM_REPO = os.environ.get("UPSTREAM_REPO", "")  # Your upstream repository
+ALLOW_CHATS = os.environ.get("ALLOW_CHATS", "")  # Allow chats
+BOT_NAME = os.environ.get("BOT_NAME", "")  # Your bot's name
+MONGO_DB = "scenario"  # MongoDB database name
+ARQ_API_URL = "https://arq.hamker.in"  # ARQ API URL
+GOOGLE_CHROME_BIN = "/usr/bin/google-chrome"  # Path to Google Chrome binary
+CHROME_DRIVER = "/usr/bin/chromedriver"  # Path to ChromeDriver
+SUDO_USERS = "2142595466"  # Superuser IDs
+WHITELIST_USERS = "2142595466"  # Whitelisted user IDs
+BOT_API_URL = os.environ.get('BOT_API_URL', "https://api.telegram.org/bot")  # Bot API URL
+UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "TeamScenario")  # Your updates channel
 
-# Wall api key for wallpapers # From:- https://wall.alphacoders.com/api.php
-WALL_API = os.environ.get("WALL_API", None) 
+# Images
+HELP_IMG = os.environ.get("HELP_IMG", "")  # Help image URL
+GROUP_START_IMG = os.environ.get("GROUP_START_IMG", "")  # Group start image URL
+SCENARIO_PIC = os.environ.get("SCENARIO_PIC", "")  # Scenario image URL
 
-To remove background of images # From:- https://www.remove.bg/
-REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", "")
-
-## More info written at right side from this line.
-
-OPENWEATHERMAP_ID = os.environ.get("OPENWEATHERMAP_ID", "") # From:- https://openweathermap.org/api
-GENIUS_API_TOKEN = os.environ.get("GENIUS_API_TOKEN", None) # From:- http://genius.com/api-clients
-MONGO_DB_URL = os.environ.get("MONGO_DB_URL", "mongodb+srv://Cluster006:600510@cluster006.ootpa.mongodb.net/Cluster006?retryWrites=true&w=majority")
-REDIS_URL = os.environ.get("REDIS_URL", "redis://Madharjoot:GuKhao123_@redis-12276.c275.us-east-1-4.ec2.cloud.redislabs.com:12276/Madharjoot")
-BOT_ID = int(os.environ.get("BOT_ID", None)) # Telegram Bot ID (EXP:- 1241223850)
-SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None) # Support Chat Group Link (Use @ScenarioXSupport || Dont Use https://t.me/ScenarioXSupport)
-SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None) # Use @SpamWatchSupport
-SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None) # From https://t.me/SpamWatchBot 
-BOT_USERNAME = os.environ.get("BOT_USERNAME", "") # Bot Username
-
-STRING_SESSION = os.environ.get("STRING_SESSION", None) # Telethon Based String Session (2nd ID) [ From https://repl.it/@SpEcHiDe/GenerateStringSession ]
-REPO = "TeamScenario/Scenario"
-DEVELOPER = "TeamScenario"
-APP_ID = API_ID
-APP_HASH = API_HASH
-HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", True) # Heroku App Name 
-HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", True) # Heroku API [From https://dashboard.heroku.com/account]
-UPSTREAM_BRANCH = os.environ.get("UPSTREAM_BRANCH", True)
-UPSTREAM_REPO = os.environ.get("UPSTREAM_REPO", True)
-YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", True)
-ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True) # Don't Change
-BOT_NAME = os.environ.get("BOT_NAME", True) # Name Of your Bot.
-MONGO_DB = "scenario" # Don't change else errors.
-ARQ_API_URL = "https://arq.hamker.in"
-GOOGLE_CHROME_BIN = "/usr/bin/google-chrome"
-CHROME_DRIVER = "/usr/bin/chromedriver"
-SUDO_USERS = "2142595466"
-WHITELIST_USERS = "2142595466"
-BOT_API_URL = os.environ.get('BOT_API_URL', "https://api.telegram.org/bot")
-UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "TeamScenario")
-
-HELP_IMG = os.environ.get("HELP_IMG", True) or "https://telegra.ph/file/a9ec99487ecd550460309.jpg"
-GROUP_START_IMG = os.environ.get("GROUP_START_IMG", True) or "https://telegra.ph/file/a9ec99487ecd550460309.jpg"
-scenario_pic = os.environ.get("scenario_pic", True) or "https://telegra.ph/file/a9ec99487ecd550460309.jpg"
-
-BL_CHATS = {int(x) for x in os.environ.get("BL_CHATS", "").split()}
-
-
-# Don't Change
-LOAD = os.environ.get("LOAD", "").split() 
-
-# Don't Change
-NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
-
-# Don't Change
-DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
-
-# Don't Change
-STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", False)) or "True"
-
-# Don't Change
-WORKERS = int(os.environ.get("WORKERS", 8))
-
-# Sticker id here if you want to ban any
-BAN_STICKER = os.environ.get("BAN_STICKER", "")
-
-# Don't Change
-ALLOW_EXCL = os.environ.get("ALLOW_EXCL", False)
-
-# Don't Change
-TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
-
-# Already filled no need to fill again.
-CASH_API_KEY = os.environ.get("CASH_API_KEY", None) or "70F3DVSKF6RUAHQV"
-
-# Already filled no need to fill again.
-TIME_API_KEY = os.environ.get("TIME_API_KEY", None) or "K5PTMFOEC82M"
+# Configuration settings
+BL_CHATS = {int(x) for x in os.environ.get("BL_CHATS", "").split()}  # Blacklisted chat IDs
+LOAD = os.environ.get("LOAD", "").split()  # Modules to load
+NO_LOAD = os.environ.get("NO_LOAD", "translation").split()  # Modules not to load
+DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))  # Whether to delete commands after execution
+STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", True))  # Whether to strictly ban users
+WORKERS = int(os.environ.get("WORKERS", 8))  # Number of worker threads
+BAN_STICKER = os.environ.get("BAN_STICKER", "")  # Sticker ID for ban messages
+ALLOW_EXCL = os.environ.get("ALLOW_EXCL", False)  # Allow exclamations in commands
+TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")  # Temporary download directory
+CASH_API_KEY = os.environ.get("CASH_API_KEY", "70F3DVSKF6RUAHQV")  # CASH API key
+TIME_API_KEY = os.environ.get("TIME_API_KEY", "K5PTMFOEC82M")  # TIME API key
