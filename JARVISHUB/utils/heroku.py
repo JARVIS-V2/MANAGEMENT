@@ -1,6 +1,6 @@
 import socket
 
-from scenario import HEROKU_API_KEY
+from JARVISHUB import HEROKU_API_KEY
 
 
 async def is_heroku():
