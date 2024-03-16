@@ -1,2 +1,2 @@
-scenario: python3 -m scenario
-ps:scale scenario=1
+scenario: python3 -m JARVISHUB
+ps:scale JARVISHUB=1
