@@ -1,19 +1,18 @@
 {
-      "name": "Scenario",
-      "description": "An Anime Theme Telegram group management bot.",
-      "keywords": [
-         "telegram",
-         "anime",
-         "Scenario",
-         "Powerful",
-         "group",
-         "manager"
-      ],
-    
-   "logo":    "https://telegra.ph/file/b2f2121639a12d557103c.jpg",  
-   "repository": "https://github.com/TeamScenario/Scenario",
+   "name": "jarvis",
+   "description": "A Telegram group management bot.",
+   "keywords": [
+      "telegram",
+      "anime",
+      "Scenario",
+      "Powerful",
+      "group",
+      "manager"
+   ],
+   "logo": "https://telegra.ph/file/4a7af59f41df99d1ce5d8.jpg",
+   "repository": "https://github.com/doraemon890/JARVIS-X-ANAGER",
    "addons": [
-          {
+      {
          "options": {
             "version": "12"
          },
@@ -35,42 +34,45 @@
          "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
          "required": true,
          "value": ""
-      },      
+      },
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
          "value": ""
       },
       "BOT_ID": {
-         "description": "Your bot ID..",
+         "description": "Your bot ID.",
          "required": true,
          "value": ""
       },
       "HEROKU_API_KEY": {
-        "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
-        "value": ""
+         "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
+         "value": ""
       },
       "HEROKU_APP_NAME": {
-        "description": "Enter the Heroku app name here (Must an exact same name with your input above).",
-        "required": true
+         "description": "Enter the Heroku app name here (Must be an exact same name with your input above).",
+         "required": true,
+         "value": ""
       },
       "MONGO_DB_URL": {
-        "description": "Mongo db url get it from mongodb.com",
-        "required": true
+         "description": "MongoDB URL, get it from mongodb.com",
+         "required": true,
+         "value": ""
       },
       "REDIS_URL": {
-        "description": "Redis db url get it from: redis.com",
-        "required": true
+         "description": "Redis URL, get it from redis.com",
+         "required": true,
+         "value": ""
       },
       "UPSTREAM_REPO": {
-        "description": "Upstream repo for /update command, don't change.",
-        "required": true,
-        "value": "https://github.com/TeamScenario/Scenario"
+         "description": "Upstream repo for /update command, don't change.",
+         "required": true,
+         "value": "https://github.com/doraemon890/JARVIS-X-ANAGER"
       },
       "UPSTREAM_BRANCH": {
-        "description": "Upstream branch",
-        "required": true,
-        "value": "TeamScenario"
+         "description": "Upstream branch",
+         "required": true,
+         "value": "MASTER"
       },
       "OWNER_USERNAME": {
          "description": "Your username without @",
@@ -79,142 +81,141 @@
       },
       "UPDATES_CHANNEL": {
          "description": "Updates channel without @",
-         "value": "TeamScenario"
+         "value": "JARVIS_X_SUPPORT"
       },
       "SUPPORT_CHAT": {
-         "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to masha support than consider you made an enemy.",
+         "description": "Your Telegram support group chat username where your users will go and bother you. Format: MyGroupChatUsernameBlah.",
          "required": true,
-         "value": "TeamScenario"
+         "value": "JARVIS_X_SUPPORT"
       },
       "IBM_WATSON_CRED_URL": {
-         "description": "This is required for the speech to text module. Get your USERNAME from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html",
+         "description": "Username for IBM Watson Speech to Text module.",
          "required": false
-     },
-     "IBM_WATSON_CRED_PASSWORD": {
-        "description": "This is required for the speech to text module. Get your PASSWORD from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html",
-        "required": false
-     },
-     "EVENT_LOGS": {
-         "description": "Make a new group then add @ScenarioXbot then send /id you'll get chat it fill it here.",
+      },
+      "IBM_WATSON_CRED_PASSWORD": {
+         "description": "Password for IBM Watson Speech to Text module.",
+         "required": false
+      },
+      "EVENT_LOGS": {
+         "description": "Group for event logs.",
          "required": true,
          "value": ""
       },
       "JOIN_LOGGER": {
-         "description": "A channel where bot will print who added it to what group, useful during debugging or spam handling. add @ScenarioXbot then send /id you'll get chat it fill it here.",
+         "description": "Channel for logging who added the bot to what group.",
          "required": true,
          "value": ""
       },
       "API_OPENWEATHER": {
-        "description": "Get your own APPID from https://api.openweathermap.org/data/2.5/weather",
-        "value": "",
-        "required": false
+         "description": "Your OpenWeatherMap APPID.",
+         "required": false,
+         "value": ""
       },
       "DEV_USERS": {
-         "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Masha support then keep the current ID's here at they are and add yours.",
+         "description": "IDs of users who are Devs of your bot.",
          "required": true,
          "value": ""
       },
       "SPAMWATCH_API": {
-         "description": "Spamwatch API Token, Get one from @SpamWatchBot.",
+         "description": "Spamwatch API Token, get one from @SpamWatchBot.",
          "required": false,
          "value": ""
-      }, 
+      },
       "STRICT_GBAN": {
-         "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
+         "description": "Enforce gbans across new groups as well as old groups.",
          "value": "True"
       },
       "DRAGONS": {
-         "description": "A space separated list of user IDs who you want to assign as sudo users.",
+         "description": "User IDs for sudo users.",
          "required": false,
          "value": ""
       },
       "DEMONS": {
-         "description": "A space separated list of user IDs who you wanna assign as support users(gban perms only).",
+         "description": "User IDs for support users (gban perms only).",
          "required": false,
          "value": ""
       },
       "TIGERS": {
-         "description": "A space separated list of user IDs who you wanna assign as tiger users.",
+         "description": "User IDs for tiger users.",
          "required": false,
          "value": ""
       },
       "WOLVES": {
-         "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
+         "description": "User IDs for whitelisted users.",
          "required": false,
          "value": ""
       },
       "ENV": {
-         "description": "Setting this to ANYTHING will enable environment variables. Leave it as it is",
+         "description": "Setting this to ANYTHING will enable environment variables.",
          "value": "ANYTHING"
       },
       "WEBHOOK": {
-         "description": "!No need to fill this! Setting this to ANYTHING will enable webhooks. If you dont know how this works leave it as it is",
+         "description": "Enable webhooks.",
          "required": false,
          "value": ""
       },
       "PORT": {
-         "description": "Port to use for your webhooks. Better leave this as it is on heroku",
+         "description": "Port to use for webhooks.",
          "required": false,
          "value": ""
       },
       "URL": {
-         "description": "The Heroku App URL :-  https://<appname>.herokuapp.com/",
+         "description": "Heroku App URL.",
          "required": false,
          "value": ""
       },
-      "No_LOAD": {
-         "description": "Dont load these modules cause they shit, space separation",
+      "NO_LOAD": {
+         "description": "Modules not to load.",
          "required": false,
          "value": "rss"
-      }, 
+      },
       "BL_CHATS": {
-         "description": "List of chats you want blacklisted.",
+         "description": "List of chats to blacklist.",
          "required": false,
          "value": ""
       },
       "ALLOW_EXCL": {
-         "description": "Set this to True if you want ! to be a command prefix along with /. Recommended is True",
+         "description": "Set to True to allow ! as a command prefix along with /.",
          "value": "True"
       },
       "DEL_CMDS": {
-         "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
+         "description": "Set to True to delete command messages from unauthorized users.",
          "value": "True"
-     },      
+      },
       "BAN_STICKER": {
-         "description": "ID of the sticker you want to use when banning people.",
+         "description": "Sticker ID to use when banning people.",
          "required": false,
          "value": ""
       },
       "STRING_SESSION": {
-         "description": "Telethon string session use @StarkStringGenBot and Never share your session.",
+         "description": "Telethon string session.",
          "required": false,
          "value": "Leave empty if you don't know how to create"
       },
       "YOUTUBE_API_KEY": {
-         "description": "YT api",
+         "description": "YouTube API key.",
          "required": false,
          "value": ""
       },
       "HELP_IMG": {
-         "description": "Image on /help command set telegraph link...Dm: @ScenarioXbot on telegram send the image you want to set and reply to the image then send /tgm and set that link :)",
+         "description": "Image URL for /help command.",
          "required": false,
          "value": ""
       },
       "GROUP_START_IMG": {
-         "description": "Image to show when someone to /start in groups set telegraph link...Dm: @ScenarioXbot on telegram send the image you want to set and reply to the image then send /tgm and set that link :)",
+         "description": "Image URL for /start command in groups.",
          "required": false,
          "value": ""
       },
       "GENIUS_API_TOKEN": {
-         "description": "For lyrics get one from http://genius.com/api-clients",
+         "description": "Genius API Token for lyrics.",
          "required": false,
          "value": ""
       },
       "WALL_API": {
-         "description": "Required for wallpaper. Get your's from https://wall.alphacoders.com/",
+         "description": "API key for wallpapers.",
          "required": false,
          "value": ""
       }
-      
    }
 }
