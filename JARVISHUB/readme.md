@@ -1,27 +1,27 @@
 # Clients
 ## Importing Pyrogram
 ```python3
-from scenario import pgram
+from JARVISHUB import pgram
 ```
 ## Importing Telethon
 ```python3
-from scenario import telethn
+from JARVISHUB import telethn
 ```
 ## Importing Userbot
 ```python3
-from scenario import ubot
+from JARVISHUB import ubot
 ```
 ## Importing ARQ
 ```python3
-from scenario import arq
+from JARVISHUB import arq
 ```
 
 # DataBase
 ## Importing MongoDB
 ```python3
-from scenario import mongodb
+from JARVISHUB import mongodb
 ```
 ## Importing Postgres
 ```python3
-from scenario.modules.sql import SESSION
+from JARVISHUB.modules.sql import SESSION
 ```
