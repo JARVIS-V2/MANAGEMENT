@@ -1,4 +1,4 @@
 @echo off
-TITLE scenario
-:: Enables virtual env mode and then starts scenario
-env\scripts\activate.bat && py -m scenario
+TITLE JARVISHUB
+:: Enables virtual env mode and then starts JARVISHUB
+env\scripts\activate.bat && py -m JARVISHUB
