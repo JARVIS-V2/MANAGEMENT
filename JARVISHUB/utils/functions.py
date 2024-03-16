@@ -11,8 +11,8 @@ from carbonnow import Carbon
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 from wget import download
 
-from scenario.utils import aiodownloader
-from scenario.utils.fetch import fetch
+from JARVISHUB.utils import aiodownloader
+from JARVISHUB.utils.fetch import fetch
 
 """
 Just import 'downloader' anywhere and do downloader.download() to
