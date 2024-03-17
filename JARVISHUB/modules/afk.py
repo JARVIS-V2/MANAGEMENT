@@ -9,14 +9,14 @@ from telegram import MessageEntity, ParseMode
 from telegram.error import BadRequest
 from telegram.ext import Filters, MessageHandler, run_async
 
-from scenario import dispatcher
-from scenario.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
-from scenario.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
-from scenario import REDIS
-from scenario.modules.users import get_user_id
+from JARVISHUB import dispatcher
+from JARVISHUB.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
+from JARVISHUB.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
+from JARVISHUB import REDIS
+from JARVISHUB.modules.users import get_user_id
 
-from scenario.modules.helper_funcs.alternate import send_message
-from scenario.modules.helper_funcs.readable_time import get_readable_time
+from JARVISHUB.modules.helper_funcs.alternate import send_message
+from JARVISHUB.modules.helper_funcs.readable_time import get_readable_time
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8

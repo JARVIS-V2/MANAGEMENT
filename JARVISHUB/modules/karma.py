@@ -4,12 +4,12 @@ import re
 
 from pyrogram import filters
 
-from scenario import pgram, BOT_USERNAME
-from scenario.utils.errors import capture_err
-from scenario.utils.permissions import adminsOnly
-from scenario.modules.mongo.karma_mongo import (alpha_to_int, get_karma,
+from JARVISHUB import pgram, BOT_USERNAME
+from JARVISHUB.utils.errors import capture_err
+from JARVISHUB.utils.permissions import adminsOnly
+from JARVISHUB.modules.mongo.karma_mongo import (alpha_to_int, get_karma,
                                    get_karmas, int_to_alpha, update_karma)   
-from scenario.modules.mongo.karma_mongo import is_karma_on, karma_off, karma_on
+from JARVISHUB.modules.mongo.karma_mongo import is_karma_on, karma_off, karma_on
 
 karma_positive_group = 3
 karma_negative_group = 4

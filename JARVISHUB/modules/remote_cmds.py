@@ -1,7 +1,7 @@
-from scenario import LOGGER, dispatcher
-from scenario.modules.helper_funcs.extraction import extract_user_and_text
-from scenario.modules.helper_funcs.filters import CustomFilters
-from scenario.modules.helper_funcs.chat_status import (
+from JARVISHUB import LOGGER, dispatcher
+from JARVISHUB.modules.helper_funcs.extraction import extract_user_and_text
+from JARVISHUB.modules.helper_funcs.filters import CustomFilters
+from JARVISHUB.modules.helper_funcs.chat_status import (
     bot_admin,
     is_bot_admin,
     is_user_ban_protected,

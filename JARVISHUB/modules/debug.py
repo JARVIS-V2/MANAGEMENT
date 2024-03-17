@@ -4,8 +4,8 @@ import datetime
 from telethon import events
 from telegram import Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
-from scenario import telethn, dispatcher
-from scenario.modules.helper_funcs.chat_status import dev_plus
+from JARVISHUB import telethn, dispatcher
+from JARVISHUB.modules.helper_funcs.chat_status import dev_plus
 
 DEBUG_MODE = False
 

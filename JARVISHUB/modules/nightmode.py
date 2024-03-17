@@ -6,9 +6,9 @@ from telethon import functions
 from telethon import *
 from telethon import Button, custom, events
 
-from scenario.modules.sql.night_mode_sql import add_nightmode, rmnightmode, get_all_chat_id, is_nightmode_indb
-from scenario.events import register
-from scenario import OWNER_ID, telethn, LOGGER
+from JARVISHUB.modules.sql.night_mode_sql import add_nightmode, rmnightmode, get_all_chat_id, is_nightmode_indb
+from JARVISHUB.events import register
+from JARVISHUB import OWNER_ID, telethn, LOGGER
 
 hehes = ChatBannedRights(
     until_date=None,

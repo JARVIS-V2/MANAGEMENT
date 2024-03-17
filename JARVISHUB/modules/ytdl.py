@@ -15,8 +15,8 @@ from telethon.tl.types import DocumentAttributeAudio
 from collections import deque
 from html import unescape
 
-from scenario.events import register
-from scenario import YOUTUBE_API_KEY
+from JARVISHUB.events import register
+from JARVISHUB import YOUTUBE_API_KEY
 
 
 

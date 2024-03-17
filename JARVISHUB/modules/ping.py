@@ -5,9 +5,9 @@ from typing import List
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 
-from scenario import StartTime, dispatcher
-from scenario.modules.helper_funcs.chat_status import sudo_plus
-from scenario.modules.disable import DisableAbleCommandHandler
+from JARVISHUB import StartTime, dispatcher
+from JARVISHUB.modules.helper_funcs.chat_status import sudo_plus
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
 
 sites_list = {
     "Telegram": "https://api.telegram.org",

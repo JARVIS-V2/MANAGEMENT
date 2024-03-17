@@ -7,8 +7,8 @@ import numpy as np
 from pydub import AudioSegment
 from telethon import events
 
-from scenario.utils.pluginhelpers import is_admin
-from scenario import telethn, BOT_ID, OWNER_ID, SUPPORT_CHAT
+from JARVISHUB.utils.pluginhelpers import is_admin
+from JARVISHUB import telethn, BOT_ID, OWNER_ID, SUPPORT_CHAT
 
 TMP_DOWNLOAD_DIRECTORY = "./"
 

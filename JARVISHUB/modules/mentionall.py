@@ -6,7 +6,7 @@ from telethon import Button
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
 
-from scenario import telethn
+from JARVISHUB import telethn
 
 @telethn.on(events.NewMessage(pattern="^/tagall|/call|/tall|/all|/mentionall|#all|@all?(.*)"))
 async def mentionall(event):

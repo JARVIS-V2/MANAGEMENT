@@ -7,9 +7,9 @@ import wget
 from bs4 import BeautifulSoup
 from pyrogram import filters
 
-from scenario.utils.pluginhelpers import admins_only
-from scenario.utils.progress import progress
-from scenario import pgram
+from JARVISHUB.utils.pluginhelpers import admins_only
+from JARVISHUB.utils.progress import progress
+from JARVISHUB import pgram
 
 
 @pgram.on_message(filters.command("mod") & ~filters.edited & ~filters.bot)

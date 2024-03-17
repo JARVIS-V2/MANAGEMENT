@@ -3,7 +3,7 @@ import re
 import os
 import html
 import requests
-import scenario.modules.sql.chatbot_sql as sql
+import JARVISHUB.modules.sql.chatbot_sql as sql
 
 from time import sleep
 from telegram import ParseMode
@@ -30,10 +30,10 @@ from telegram.ext import (
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
-from scenario.modules.helper_funcs.filters import CustomFilters
-from scenario.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
-from scenario import dispatcher, updater, SUPPORT_CHAT
-from scenario.modules.log_channel import gloggable
+from JARVISHUB.modules.helper_funcs.filters import CustomFilters
+from JARVISHUB.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
+from JARVISHUB import dispatcher, updater, SUPPORT_CHAT
+from JARVISHUB.modules.log_channel import gloggable
 
 
 @run_async
@@ -138,7 +138,7 @@ def chatbot(update: Update, context: CallbackContext):
             return
         shb = message.text
         bot.send_chat_action(chat_id, action="typing")
-        url = f"https://kukiapi.xyz/api/apikey=1356469075-KUKIkq4WMg5FV4/Scenario/CoderX/message={shb}"
+        url = f"https://kukiapi.xyz/api/apikey=1356469075-KUKIkq4WMg5FV4/JARVISHUB/CoderX/message={shb}"
         request = requests.get(url)
         results = json.loads(request.text)
         result = f"{results['reply']}"
@@ -148,7 +148,7 @@ def chatbot(update: Update, context: CallbackContext):
 
 def list_all_chats(update: Update, context: CallbackContext):
     chats = sql.get_all_kuki_chats()
-    text = "<b>Scenario chatbot Enabled Chats</b>\n"
+    text = "<b>JARVISHUB chatbot Enabled Chats</b>\n"
     for chat in chats:
         try:
             x = context.bot.get_chat(int(*chat))

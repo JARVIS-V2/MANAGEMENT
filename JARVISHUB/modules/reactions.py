@@ -1,7 +1,7 @@
 import random
 
-from scenario import dispatcher
-from scenario.modules.disable import DisableAbleCommandHandler
+from JARVISHUB import dispatcher
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
 from telegram import Update
 from telegram.ext import CallbackContext, run_async
 

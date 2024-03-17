@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import Boolean, Column, Integer, String, UnicodeText, distinct, func
 
-from scenario.modules.helper_funcs.msg_types import Types
+from JARVISHUB.modules.helper_funcs.msg_types import Types
 from . import BASE, SESSION
 
 

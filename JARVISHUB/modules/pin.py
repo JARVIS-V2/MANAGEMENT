@@ -4,8 +4,8 @@ from pyrogram import filters
 from pyrogram.errors import ChatAdminRequired, RightForbidden, RPCError
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from scenario.utils.pluginhelp import member_permissions
-from scenario import pgram, db
+from JARVISHUB.utils.pluginhelp import member_permissions
+from JARVISHUB import pgram, db
 
 BTN_URL_REGEX = compile(r"(\[([^\[]+?)\]\(buttonurl:(?:/{0,2})(.+?)(:same)?\))")
 

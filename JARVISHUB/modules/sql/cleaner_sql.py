@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import Boolean, Column, UnicodeText
 
-from scenario.modules.sql import BASE, SESSION
+from JARVISHUB.modules.sql import BASE, SESSION
 
 
 class CleanerBlueTextChatSettings(BASE):

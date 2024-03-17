@@ -4,9 +4,9 @@ from random import randint
 from telegram import Update, ChatAction
 from telegram.ext import CallbackContext, run_async
 
-from scenario import SUPPORT_CHAT, WALL_API, dispatcher
-from scenario.modules.disable import DisableAbleCommandHandler
-from scenario.modules.helper_funcs.alternate import send_action
+from JARVISHUB import SUPPORT_CHAT, WALL_API, dispatcher
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
+from JARVISHUB.modules.helper_funcs.alternate import send_action
 
 # Wallpaper module powered by wall.alphacoders.com
 

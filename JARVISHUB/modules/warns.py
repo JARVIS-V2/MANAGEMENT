@@ -3,23 +3,23 @@ import re
 from typing import Optional
 
 import telegram
-from scenario import BAN_STICKER, TIGERS, WOLVES, dispatcher
-from scenario.modules.disable import DisableAbleCommandHandler
-from scenario.modules.helper_funcs.chat_status import (bot_admin,
+from JARVISHUB import BAN_STICKER, TIGERS, WOLVES, dispatcher
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
+from JARVISHUB.modules.helper_funcs.chat_status import (bot_admin,
                                                            can_restrict,
                                                            is_user_admin,
                                                            user_admin,
                                                            user_admin_no_reply,
                                                            can_delete)
-from scenario.modules.helper_funcs.extraction import (extract_text,
+from JARVISHUB.modules.helper_funcs.extraction import (extract_text,
                                                           extract_user,
                                                           extract_user_and_text)
-from scenario.modules.helper_funcs.filters import CustomFilters
-from scenario.modules.helper_funcs.misc import split_message
-from scenario.modules.helper_funcs.string_handling import split_quotes
-from scenario.modules.log_channel import loggable
-from scenario.modules.sql import warns_sql as sql
-from scenario.modules.redis.approvals_redis import is_approved
+from JARVISHUB.modules.helper_funcs.filters import CustomFilters
+from JARVISHUB.modules.helper_funcs.misc import split_message
+from JARVISHUB.modules.helper_funcs.string_handling import split_quotes
+from JARVISHUB.modules.log_channel import loggable
+from JARVISHUB.modules.sql import warns_sql as sql
+from JARVISHUB.modules.redis.approvals_redis import is_approved
 from telegram import (CallbackQuery, Chat, InlineKeyboardButton,
                       InlineKeyboardMarkup, Message, ParseMode, Update, User)
 from telegram.error import BadRequest

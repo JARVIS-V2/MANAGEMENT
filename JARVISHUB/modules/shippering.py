@@ -1,8 +1,8 @@
 import random
 
-from scenario import pgram
-from scenario.utils.errors import capture_err
-from scenario.modules.mongo.couples_mongo import get_couple, save_couple
+from JARVISHUB import pgram
+from JARVISHUB.utils.errors import capture_err
+from JARVISHUB.modules.mongo.couples_mongo import get_couple, save_couple
 from pyrogram import filters
 from datetime import datetime
 

@@ -6,8 +6,8 @@ from telegram.ext import CallbackContext
 from telegram.inline.inlinekeyboardbutton import InlineKeyboardButton
 from telegram.inline.inlinekeyboardmarkup import InlineKeyboardMarkup
 
-from scenario import DEV_USERS, DRAGONS, dispatcher
-from scenario.modules.helper_funcs.decorators import callback as scenariocall
+from JARVISHUB import DEV_USERS, DRAGONS, dispatcher
+from JARVISHUB.modules.helper_funcs.decorators import callback as JARVISHUBcall
 
 
 class AdminPerms(Enum):
@@ -82,7 +82,7 @@ def user_admin(permission: AdminPerms):
     return wrapper
 
 
-@scenariocall(pattern="anoncb")
+@JARVISHUBcall(pattern="anoncb")
 def anon_callback_handler1(upd: Update, _: CallbackContext):
     message = upd.effective_message
     chat = upd.effective_chat

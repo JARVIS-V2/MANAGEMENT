@@ -1,6 +1,6 @@
 from pyrogram import filters
 
-from scenario import pgram, arq, BOT_USERNAME
+from JARVISHUB import pgram, arq, BOT_USERNAME
 
 
 @pgram.on_message(filters.command("arq"))

@@ -1,7 +1,7 @@
 import random
 import asyncio
 from pyrogram import filters
-from scenario import pgram as scenario
+from JARVISHUB import pgram as JARVISHUB
 
 
 
@@ -34,7 +34,7 @@ ROMANTIC_STRINGS = [
     Coded by : @CoderX on telegram...
 """
 
-@scenario.on_message(filters.command("romantic"))
+@JARVISHUB.on_message(filters.command("romantic"))
 async def lel(bot, message):
     ran = random.choice(ROMANTIC_STRINGS)
     await bot.send_chat_action(message.chat.id, "typing")

@@ -5,8 +5,8 @@ import requests
 from datetime import datetime
 from telethon import events
 
-from scenario.utils.pluginhelpers import is_admin
-from scenario import telethn, BOT_USERNAME, SUPPORT_CHAT
+from JARVISHUB.utils.pluginhelpers import is_admin
+from JARVISHUB import telethn, BOT_USERNAME, SUPPORT_CHAT
 
 
 def main(url, filename):

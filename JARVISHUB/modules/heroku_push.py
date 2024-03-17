@@ -15,17 +15,17 @@ from git.exc import GitCommandError, InvalidGitRepositoryError
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from scenario import (HEROKU_API_KEY, HEROKU_APP_NAME, UPSTREAM_BRANCH,
+from JARVISHUB import (HEROKU_API_KEY, HEROKU_APP_NAME, UPSTREAM_BRANCH,
                     UPSTREAM_REPO)
-from scenario import JOIN_LOGGER
-from scenario import pgram, DEV_USERS
-from scenario.utils.heroku import is_heroku, user_input
-from scenario.utils.paste import isPreviewUp, paste_queue
+from JARVISHUB import JOIN_LOGGER
+from JARVISHUB import pgram, DEV_USERS
+from JARVISHUB.utils.heroku import is_heroku, user_input
+from JARVISHUB.utils.paste import isPreviewUp, paste_queue
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
-BOT_NAME = "Scenario"
+BOT_NAME = "JARVISHUB"
 
 
 XCB = [

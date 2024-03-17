@@ -24,11 +24,11 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
-import scenario.modules.sql.kuki_sql as sql
-from scenario import dispatcher
-from scenario.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
-from scenario.modules.helper_funcs.filters import CustomFilters
-from scenario.modules.log_channel import gloggable
+import JARVISHUB.modules.sql.kuki_sql as sql
+from JARVISHUB import dispatcher
+from JARVISHUB.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
+from JARVISHUB.modules.helper_funcs.filters import CustomFilters
+from JARVISHUB.modules.log_channel import gloggable
 
 
 @run_async
@@ -51,7 +51,7 @@ def kukirm(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                "Scenario ai Disabled By {}.".format(
+                "JARVISHUB ai Disabled By {}.".format(
                     mention_html(user.id, user.first_name)
                 ),
                 parse_mode=ParseMode.HTML,
@@ -80,7 +80,7 @@ def kukiadd(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                "Scenario ai Enabled By {}.".format(
+                "JARVISHUB ai Enabled By {}.".format(
                     mention_html(user.id, user.first_name)
                 ),
                 parse_mode=ParseMode.HTML,
@@ -133,7 +133,7 @@ def chatbot(update: Update, context: CallbackContext):
             return
         msg = message.text
         bot.send_chat_action(chat_id, action="typing")
-        url = f"https://api.affiliateplus.xyz/api/chatbot?message={msg}&botname=Scenario&ownername=Affectionate%20Contact%20him%20@U2ME_14344&user=1"
+        url = f"https://api.affiliateplus.xyz/api/chatbot?message={msg}&botname=JARVISHUB&ownername=Affectionate%20Contact%20him%20@U2ME_14344&user=1"
         request = requests.get(url)
         results = json.loads(request.text)
         result = f"{results['message']}"
@@ -143,7 +143,7 @@ def chatbot(update: Update, context: CallbackContext):
 
 def list_all_chats(update: Update, context: CallbackContext):
     chats = sql.get_all_kuki_chats()
-    text = "<b>Scenario ai Enabled Chats</b>\n"
+    text = "<b>JARVISHUB ai Enabled Chats</b>\n"
     for chat in chats:
         try:
             x = context.bot.get_chat(int(*chat))

@@ -1,14 +1,14 @@
 import os
 
-from scenario.events import register
-from scenario import telethn
+from JARVISHUB.events import register
+from JARVISHUB import telethn
 from telethon import events
 from PIL import Image
 from datetime import datetime
 from telegraph import Telegraph, upload_file, exceptions
 
 TMP_DOWNLOAD_DIRECTORY = "tg-File/"
-babe = "scenario"
+babe = "JARVISHUB"
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=babe)
 auth_url = r["auth_url"]

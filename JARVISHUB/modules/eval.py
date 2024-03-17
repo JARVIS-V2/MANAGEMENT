@@ -9,8 +9,8 @@ import traceback
 from contextlib import redirect_stdout
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, CommandHandler
-from scenario import LOGGER, dispatcher
-from scenario.modules.helper_funcs.chat_status import dev_plus
+from JARVISHUB import LOGGER, dispatcher
+from JARVISHUB.modules.helper_funcs.chat_status import dev_plus
 
 namespaces = {}
 
@@ -67,7 +67,7 @@ def do(func, bot, update):
     env = namespace_of(update.message.chat_id, update, bot)
     os.chdir(os.getcwd())
     with open(
-        os.path.join(os.getcwd(), "scenario/modules/helper_funcs/temp.txt"),
+        os.path.join(os.getcwd(), "JARVISHUB/modules/helper_funcs/temp.txt"),
         "w",
     ) as temp:
         temp.write(body)

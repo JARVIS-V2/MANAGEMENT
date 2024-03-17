@@ -7,8 +7,8 @@ import aiohttp
 from telethon.tl import functions
 from telethon.tl import types
 
-from scenario.events import register
-from scenario import telethn as tbot
+from JARVISHUB.events import register
+from JARVISHUB import telethn as tbot
 
 
 async def is_register_admin(chat, user):

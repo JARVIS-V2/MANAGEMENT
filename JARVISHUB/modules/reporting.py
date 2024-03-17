@@ -1,9 +1,9 @@
 import html
 
-from scenario import LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher
-from scenario.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from scenario.modules.log_channel import loggable
-from scenario.modules.sql import reporting_sql as sql
+from JARVISHUB import LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher
+from JARVISHUB.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from JARVISHUB.modules.log_channel import loggable
+from JARVISHUB.modules.sql import reporting_sql as sql
 from telegram import Chat, InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import (

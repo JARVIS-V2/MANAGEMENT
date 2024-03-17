@@ -1,12 +1,12 @@
 import html
 
-import scenario.modules.redis.approvals_redis as redis
+import JARVISHUB.modules.redis.approvals_redis as redis
 
-from scenario.modules.disable import DisableAbleCommandHandler
-from scenario import dispatcher, DRAGONS
-from scenario.modules.helper_funcs.extraction import extract_user
-from scenario.modules.helper_funcs.chat_status import user_admin
-from scenario.modules.log_channel import loggable
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
+from JARVISHUB import dispatcher, DRAGONS
+from JARVISHUB.modules.helper_funcs.extraction import extract_user
+from JARVISHUB.modules.helper_funcs.chat_status import user_admin
+from JARVISHUB.modules.log_channel import loggable
 from telegram.ext import CallbackContext, run_async, CallbackQueryHandler
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton, Update
 from telegram.utils.helpers import mention_html

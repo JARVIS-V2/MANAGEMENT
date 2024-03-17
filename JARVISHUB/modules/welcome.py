@@ -7,9 +7,9 @@ from multicolorcaptcha import CaptchaGenerator
 from functools import partial
 from io import BytesIO
 
-import scenario.modules.sql.welcome_sql as sql
+import JARVISHUB.modules.sql.welcome_sql as sql
 
-from scenario import (
+from JARVISHUB import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -21,19 +21,19 @@ from scenario import (
     LOGGER,
     dispatcher,
 )
-from scenario.modules.helper_funcs.chat_status import (
+from JARVISHUB.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
 )
-from scenario.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from scenario.modules.helper_funcs.msg_types import get_welcome_type
-from scenario.modules.helper_funcs.handlers import MessageHandlerChecker
-from scenario.modules.helper_funcs.string_handling import (
+from JARVISHUB.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from JARVISHUB.modules.helper_funcs.msg_types import get_welcome_type
+from JARVISHUB.modules.helper_funcs.handlers import MessageHandlerChecker
+from JARVISHUB.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )
-from scenario.modules.log_channel import loggable
-from scenario.modules.sql.global_bans_sql import is_user_gbanned
+from JARVISHUB.modules.log_channel import loggable
+from JARVISHUB.modules.sql.global_bans_sql import is_user_gbanned
 
 from telegram import (
     ChatPermissions,

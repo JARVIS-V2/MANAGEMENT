@@ -7,9 +7,9 @@ from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton
 
-from scenario import pgram, aiohttpsession
-from scenario.utils.errors import capture_err
-from scenario.utils.pastebin import paste
+from JARVISHUB import pgram, aiohttpsession
+from JARVISHUB.utils.errors import capture_err
+from JARVISHUB.utils.pastebin import paste
 
 pattern = re.compile(
     r"^text/|json$|yaml$|xml$|toml$|x-sh$|x-shellscript$"

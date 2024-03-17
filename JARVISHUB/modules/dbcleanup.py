@@ -1,9 +1,9 @@
-import scenario.modules.sql.global_bans_sql as gban_sql
-import scenario.modules.sql.users_sql as user_sql
+import JARVISHUB.modules.sql.global_bans_sql as gban_sql
+import JARVISHUB.modules.sql.users_sql as user_sql
 
 from time import sleep
-from scenario import DEV_USERS, OWNER_ID, dispatcher
-from scenario.modules.helper_funcs.chat_status import dev_plus
+from JARVISHUB import DEV_USERS, OWNER_ID, dispatcher
+from JARVISHUB.modules.helper_funcs.chat_status import dev_plus
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import (

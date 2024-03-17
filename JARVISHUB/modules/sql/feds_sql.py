@@ -5,8 +5,8 @@ from sqlalchemy import Boolean, Column, Integer, String, UnicodeText
 from sqlalchemy.sql.sqltypes import BigInteger
 from telegram.error import BadRequest, Unauthorized
 
-from scenario import dispatcher
-from scenario.modules.sql import BASE, SESSION
+from JARVISHUB import dispatcher
+from JARVISHUB.modules.sql import BASE, SESSION
 
 
 class Federations(BASE):

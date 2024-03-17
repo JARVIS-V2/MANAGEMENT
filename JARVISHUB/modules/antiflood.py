@@ -6,15 +6,15 @@ from telegram.error import BadRequest
 from telegram.ext import Filters, MessageHandler, CommandHandler, run_async
 from telegram.utils.helpers import mention_html
 
-from scenario import dispatcher, DRAGONS
-from scenario.modules.helper_funcs.chat_status import is_user_admin, user_admin
-from scenario.modules.helper_funcs.string_handling import extract_time
-from scenario.modules.log_channel import loggable
-from scenario.modules.sql import antiflood_sql as sql
-from scenario.modules.connection import connected
-from scenario.modules.redis.approvals_redis import is_approved
+from JARVISHUB import dispatcher, DRAGONS
+from JARVISHUB.modules.helper_funcs.chat_status import is_user_admin, user_admin
+from JARVISHUB.modules.helper_funcs.string_handling import extract_time
+from JARVISHUB.modules.log_channel import loggable
+from JARVISHUB.modules.sql import antiflood_sql as sql
+from JARVISHUB.modules.connection import connected
+from JARVISHUB.modules.redis.approvals_redis import is_approved
 
-from scenario.modules.helper_funcs.alternate import send_message, typing_action
+from JARVISHUB.modules.helper_funcs.alternate import send_message, typing_action
 
 FLOOD_GROUP = 3
 

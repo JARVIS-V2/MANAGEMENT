@@ -1,8 +1,8 @@
 import os
 import secureme
 
-from scenario import telethn
-from scenario.events import register
+from JARVISHUB import telethn
+from JARVISHUB.events import register
 
 @register(pattern="^/encrypt ?(.*)")
 async def hmm(event):

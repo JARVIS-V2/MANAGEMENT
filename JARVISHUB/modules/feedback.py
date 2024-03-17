@@ -8,13 +8,13 @@ from pyrogram.types import (
     Message,
 )
 
-from scenario import pgram as Client
-from scenario import (
+from JARVISHUB import pgram as Client
+from JARVISHUB import (
     OWNER_ID as owner_id,
     OWNER_USERNAME as owner_usn,
     SUPPORT_CHAT as log,
 )
-from scenario.utils.errors import capture_err
+from JARVISHUB.utils.errors import capture_err
 
 
 """

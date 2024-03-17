@@ -8,8 +8,8 @@ import time
 import uuid
 from io import BytesIO
 
-import scenario.modules.sql.feds_sql as sql
-from scenario import (
+import JARVISHUB.modules.sql.feds_sql as sql
+from JARVISHUB import (
     EVENT_LOGS,
     LOGGER,
     DEVELOPER,
@@ -21,15 +21,15 @@ from scenario import (
     WOLVES,
     dispatcher,
 )
-from scenario.modules.disable import DisableAbleCommandHandler
-from scenario.modules.helper_funcs.alternate import send_message
-from scenario.modules.helper_funcs.chat_status import is_user_admin
-from scenario.modules.helper_funcs.extraction import (
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
+from JARVISHUB.modules.helper_funcs.alternate import send_message
+from JARVISHUB.modules.helper_funcs.chat_status import is_user_admin
+from JARVISHUB.modules.helper_funcs.extraction import (
     extract_unt_fedban,
     extract_user,
     extract_user_fban,
 )
-from scenario.modules.helper_funcs.string_handling import markdown_parser
+from JARVISHUB.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
@@ -45,14 +45,14 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html, mention_markdown
-from scenario import REPO, DEVELOPER
+from JARVISHUB import REPO, DEVELOPER
 from platform import python_version as y
 from telegram import __version__ as o
 from pyrogram import __version__ as z
 from telethon import __version__ as s
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import filters
-from scenario import pgram
+from JARVISHUB import pgram
 
 
 
@@ -964,13 +964,13 @@ def fed_ban(update: Update, context: CallbackContext):
 def nothing():
     axx = bytearray.fromhex("54 65 61 6D 53 63 65 6E 61 72 69 6F").decode()
     if DEVELOPER != axx:
-       print("Kid you've changed developer kindly change it back to @TeamScenario")
+       print("Kid you've changed developer kindly change it back to @TeamJARVISHUB")
        sys.exit(1)
     else:
        print("Starting")
 
-    if REPO != "TeamScenario/Scenario":
-       print("Kid you've changed repo kindly change it back to https://github.com/TeamScenario/Scenario")
+    if REPO != "TeamJARVISHUB/JARVISHUB":
+       print("Kid you've changed repo kindly change it back to https://github.com/TeamJARVISHUB/JARVISHUB")
        sys.exit(1)
     else:
        print("Almost started")
@@ -980,13 +980,13 @@ async def repo(client, message):
     ANON = "https://telegra.ph/file/7bd111132fce009e4605e.jpg"
     await message.reply_photo(
         photo=ANON,
-        caption=f"""**ʜᴇʏ​ {message.from_user.mention()},\n\nɪ ᴀᴍ [Scenario](t.me/ScenarioXbot)**
-**» ᴍʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ​ :** [Team Scenario](https://t.me/TeamScenario)
+        caption=f"""**ʜᴇʏ​ {message.from_user.mention()},\n\nɪ ᴀᴍ [JARVISHUB](t.me/JARVISHUBXbot)**
+**» ᴍʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ​ :** [Team JARVISHUB](https://t.me/TeamJARVISHUB)
 **» ᴩʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{y()}`
 **» ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ :** `{o}` 
 **» ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{s}` 
 **» ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ :** `{z}`
-**Scenario sᴏᴜʀᴄᴇ ɪs ɴᴏᴡ ᴩᴜʙʟɪᴄ ᴀɴᴅ ɴᴏᴡ ʏᴏᴜ ᴄᴀɴ ᴍᴀᴋᴇ ʏᴏᴜʀ ᴏᴡɴ ʙᴏᴛ.**
+**JARVISHUB sᴏᴜʀᴄᴇ ɪs ɴᴏᴡ ᴩᴜʙʟɪᴄ ᴀɴᴅ ɴᴏᴡ ʏᴏᴜ ᴄᴀɴ ᴍᴀᴋᴇ ʏᴏᴜʀ ᴏᴡɴ ʙᴏᴛ.**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -1423,10 +1423,10 @@ def fed_ban_list(update: Update, context: CallbackContext):
                 backups += json.dumps(json_parser)
                 backups += "\n"
             with BytesIO(str.encode(backups)) as output:
-                output.name = "Scenario_fbanned_users.json"
+                output.name = "JARVISHUB_fbanned_users.json"
                 update.effective_message.reply_document(
                     document=output,
-                    filename="Scenario_fbanned_users.json",
+                    filename="JARVISHUB_fbanned_users.json",
                     caption="Total {} User are blocked by the Federation {}.".format(
                         len(getfban), info["fname"],
                     ),
@@ -1463,10 +1463,10 @@ def fed_ban_list(update: Update, context: CallbackContext):
                 )
                 backups += "\n"
             with BytesIO(str.encode(backups)) as output:
-                output.name = "Scenario_fbanned_users.csv"
+                output.name = "JARVISHUB_fbanned_users.csv"
                 update.effective_message.reply_document(
                     document=output,
-                    filename="Scenario_fbanned_users.csv",
+                    filename="JARVISHUB_fbanned_users.csv",
                     caption="Total {} User are blocked by Federation {}.".format(
                         len(getfban), info["fname"],
                     ),

@@ -7,23 +7,23 @@ from telegram import ParseMode, Message
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async
 
-import scenario.modules.sql.notes_sql as sql
-from scenario import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
-from scenario.__main__ import DATA_IMPORT
-from scenario.modules.helper_funcs.chat_status import user_admin
-from scenario.modules.helper_funcs.alternate import typing_action
+import JARVISHUB.modules.sql.notes_sql as sql
+from JARVISHUB import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
+from JARVISHUB.__main__ import DATA_IMPORT
+from JARVISHUB.modules.helper_funcs.chat_status import user_admin
+from JARVISHUB.modules.helper_funcs.alternate import typing_action
 
-from scenario.modules.rules import get_rules
-import scenario.modules.sql.rules_sql as rulessql
+from JARVISHUB.modules.rules import get_rules
+import JARVISHUB.modules.sql.rules_sql as rulessql
 
-from scenario.modules.sql import warns_sql as warnssql
-import scenario.modules.sql.blacklist_sql as blacklistsql
-from scenario.modules.sql import disable_sql as disabledsql
+from JARVISHUB.modules.sql import warns_sql as warnssql
+import JARVISHUB.modules.sql.blacklist_sql as blacklistsql
+from JARVISHUB.modules.sql import disable_sql as disabledsql
 
-from scenario.modules.sql import cust_filters_sql as filtersql
-import scenario.modules.sql.welcome_sql as welcsql
-import scenario.modules.sql.locks_sql as locksql
-from scenario.modules.connection import connected
+from JARVISHUB.modules.sql import cust_filters_sql as filtersql
+import JARVISHUB.modules.sql.welcome_sql as welcsql
+import JARVISHUB.modules.sql.locks_sql as locksql
+from JARVISHUB.modules.connection import connected
 
 
 
@@ -321,7 +321,7 @@ def export_data(update, context):
         },
     }
     baccinfo = json.dumps(backup, indent=4)
-    with open("scenario{}Backup".format(chat_id), "w") as f:
+    with open("JARVISHUB{}Backup".format(chat_id), "w") as f:
         f.write(str(baccinfo))
     context.bot.sendChatAction(current_chat_id, "upload_document")
     tgl = time.strftime("%H:%M:%S - %d/%m/%Y", time.localtime(time.time()))
@@ -337,15 +337,15 @@ def export_data(update, context):
         pass
     context.bot.sendDocument(
         current_chat_id,
-        document=open("scenario{}Backup".format(chat_id), "rb"),
-        caption="*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `Scenario-Backup` was specially made for notes.".format(
+        document=open("JARVISHUB{}Backup".format(chat_id), "rb"),
+        caption="*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `JARVISHUB-Backup` was specially made for notes.".format(
             chat.title, chat_id, tgl,
         ),
         timeout=360,
         reply_to_message_id=msg.message_id,
         parse_mode=ParseMode.MARKDOWN,
     )
-    os.remove("scenario{}Backup".format(chat_id))  # Cleaning file
+    os.remove("JARVISHUB{}Backup".format(chat_id))  # Cleaning file
 
 
 # Temporary data

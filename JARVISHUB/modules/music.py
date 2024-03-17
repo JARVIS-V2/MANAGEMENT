@@ -8,8 +8,8 @@ import requests
 
 from pyrogram import filters
 from pyrogram.types import Message
-from scenario import pgram, BOT_USERNAME
-from scenario.utils.pluginhelp import get_text, progress
+from JARVISHUB import pgram, BOT_USERNAME
+from JARVISHUB.utils.pluginhelp import get_text, progress
 from youtube_search import YoutubeSearch
 from youtubesearchpython import SearchVideos
 

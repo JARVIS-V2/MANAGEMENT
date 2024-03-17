@@ -1,14 +1,14 @@
 import html
 
-from scenario import ALLOW_EXCL, CustomCommandHandler, dispatcher, BOT_NAME
-from scenario.modules.disable import DisableAbleCommandHandler
-from scenario.modules.helper_funcs.chat_status import (
+from JARVISHUB import ALLOW_EXCL, CustomCommandHandler, dispatcher, BOT_NAME
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
+from JARVISHUB.modules.helper_funcs.chat_status import (
     bot_can_delete,
     connection_status,
     dev_plus,
     user_admin,
 )
-from scenario.modules.sql import cleaner_sql as sql
+from JARVISHUB.modules.sql import cleaner_sql as sql
 from telegram import ParseMode, Update
 from telegram.ext import (
     CallbackContext,

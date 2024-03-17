@@ -2,8 +2,8 @@ import asyncio
 import datetime
 
 from telethon.tl import functions, types
-from scenario.events import register
-from scenario import ubot, telethn
+from JARVISHUB.events import register
+from JARVISHUB import ubot, telethn
 
 
 async def is_register_admin(chat, user):

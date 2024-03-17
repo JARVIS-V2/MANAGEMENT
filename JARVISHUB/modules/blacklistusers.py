@@ -1,7 +1,7 @@
 import html
-import scenario.modules.sql.blacklistusers_sql as sql
+import JARVISHUB.modules.sql.blacklistusers_sql as sql
 
-from scenario import (
+from JARVISHUB import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -10,12 +10,12 @@ from scenario import (
     WOLVES,
     dispatcher,
 )
-from scenario.modules.helper_funcs.chat_status import dev_plus
-from scenario.modules.helper_funcs.extraction import (
+from JARVISHUB.modules.helper_funcs.chat_status import dev_plus
+from JARVISHUB.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from scenario.modules.log_channel import gloggable
+from JARVISHUB.modules.log_channel import gloggable
 from telegram import ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, run_async

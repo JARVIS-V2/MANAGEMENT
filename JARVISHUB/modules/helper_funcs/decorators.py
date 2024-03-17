@@ -8,15 +8,15 @@ from telegram.ext import (
 )
 from telegram.ext.filters import BaseFilter
 
-from scenario import LOGGER
-from scenario import dispatcher as d
-from scenario.modules.disable import (
+from JARVISHUB import LOGGER
+from JARVISHUB import dispatcher as d
+from JARVISHUB.modules.disable import (
     DisableAbleCommandHandler,
     DisableAbleMessageHandler,
 )
 
 
-class scenarioTelegramHandler:
+class JARVISHUBTelegramHandler:
     def __init__(self, d):
         self._dispatcher = d
 
@@ -175,7 +175,7 @@ class scenarioTelegramHandler:
         return _inlinequery
 
 
-cmd = scenarioTelegramHandler(d).command
-msg = scenarioTelegramHandler(d).message
-callback = scenarioTelegramHandler(d).callbackquery
-inline = scenarioTelegramHandler(d).inlinequery
+cmd = JARVISHUBTelegramHandler(d).command
+msg = JARVISHUBTelegramHandler(d).message
+callback = JARVISHUBTelegramHandler(d).callbackquery
+inline = JARVISHUBTelegramHandler(d).inlinequery

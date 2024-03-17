@@ -1,17 +1,17 @@
 import html
-import scenario.modules.sql.blsticker_sql as sql
+import JARVISHUB.modules.sql.blsticker_sql as sql
 
 from typing import Optional
-from scenario import LOGGER, dispatcher
-from scenario.modules.connection import connected
-from scenario.modules.disable import DisableAbleCommandHandler
-from scenario.modules.helper_funcs.alternate import send_message
-from scenario.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from scenario.modules.helper_funcs.misc import split_message
-from scenario.modules.helper_funcs.string_handling import extract_time
-from scenario.modules.redis.approvals_redis import is_approved
-from scenario.modules.log_channel import loggable
-from scenario.modules.warns import warn
+from JARVISHUB import LOGGER, dispatcher
+from JARVISHUB.modules.connection import connected
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
+from JARVISHUB.modules.helper_funcs.alternate import send_message
+from JARVISHUB.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from JARVISHUB.modules.helper_funcs.misc import split_message
+from JARVISHUB.modules.helper_funcs.string_handling import extract_time
+from JARVISHUB.modules.redis.approvals_redis import is_approved
+from JARVISHUB.modules.log_channel import loggable
+from JARVISHUB.modules.warns import warn
 from telegram import Chat, Message, ParseMode, Update, User, ChatPermissions
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, MessageHandler

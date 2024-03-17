@@ -1,6 +1,6 @@
 import ast
 
-from scenario import REDIS
+from JARVISHUB import REDIS
 
 try:
     ast.literal_eval(REDIS.get("Approvals"))

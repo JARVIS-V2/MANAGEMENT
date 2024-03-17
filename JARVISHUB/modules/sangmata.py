@@ -1,8 +1,8 @@
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl import functions, types
 
-from scenario.events import register as scenario
-from scenario import telethn, ubot
+from JARVISHUB.events import register as JARVISHUB
+from JARVISHUB import telethn, ubot
 
 
 async def is_register_admin(chat, user):
@@ -35,7 +35,7 @@ async def silently_send_message(conv, text):
     return response
 
 
-@scenario(pattern="^/sg ?(.*)")
+@JARVISHUB(pattern="^/sg ?(.*)")
 async def _(event):
 
     if event.fwd_from:

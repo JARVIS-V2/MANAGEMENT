@@ -3,12 +3,12 @@ import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
 
-from scenario import telethn, BOT_NAME
-from scenario.events import register as scenario
+from JARVISHUB import telethn, BOT_NAME
+from JARVISHUB.events import register as JARVISHUB
 
 
 
-@scenario(pattern="^/tagall ?(.*)")
+@JARVISHUB(pattern="^/tagall ?(.*)")
 async def _(event):
     if event.fwd_from:
         return

@@ -20,10 +20,10 @@ from zalgo_text import zalgo
 
 from pyrogram import filters
 
-from scenario.utils.errors import capture_err
-from scenario.utils.carbon import make_carbon
-from scenario.events import register
-from scenario import telethn, ubot, pgram, TEMP_DOWNLOAD_DIRECTORY, SUPPORT_CHAT, GOOGLE_CHROME_BIN, CHROME_DRIVER
+from JARVISHUB.utils.errors import capture_err
+from JARVISHUB.utils.carbon import make_carbon
+from JARVISHUB.events import register
+from JARVISHUB import telethn, ubot, pgram, TEMP_DOWNLOAD_DIRECTORY, SUPPORT_CHAT, GOOGLE_CHROME_BIN, CHROME_DRIVER
 
 nltk.download("punkt")
 nltk.download("averaged_perceptron_tagger")

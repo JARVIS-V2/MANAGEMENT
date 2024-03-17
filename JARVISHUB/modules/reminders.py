@@ -7,8 +7,8 @@ from telegram.ext.callbackcontext import CallbackContext
 from telegram.ext.filters import Filters
 from telegram.parsemode import ParseMode
 
-from scenario import OWNER_ID, updater, dispatcher
-from scenario.modules.disable import DisableAbleCommandHandler
+from JARVISHUB import OWNER_ID, updater, dispatcher
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
 
 
 job_queue = updater.job_queue

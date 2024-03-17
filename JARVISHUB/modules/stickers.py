@@ -14,10 +14,10 @@ from telegram import TelegramError, Update
 from telegram.ext import run_async, CallbackContext
 from telegram.utils.helpers import mention_html
 
-from scenario import dispatcher
-from scenario.modules.disable import DisableAbleCommandHandler
-from scenario.events import register as scenario
-from scenario import telethn as bot
+from JARVISHUB import dispatcher
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
+from JARVISHUB.events import register as JARVISHUB
+from JARVISHUB import telethn as bot
 
 combot_stickers_url = "https://combot.org/telegram/stickers?q="
 
@@ -487,7 +487,7 @@ def delsticker(update, context):
 Credit = "This Plugin Made by Kittu (@A_viyu), if you're using this code in your bot. there is no issue but don't remove this line" 
 
 
-@scenario(pattern="^/mmf ?(.*)")
+@JARVISHUB(pattern="^/mmf ?(.*)")
 async def handler(event):
     if event.fwd_from:
         return
@@ -525,7 +525,7 @@ async def drawText(image_path, text):
     if os.name == "nt":
         fnt = "ariel.ttf"
     else:
-        fnt = "./scenario/resources/ArmWrestler.ttf"
+        fnt = "./JARVISHUB/resources/ArmWrestler.ttf"
     m_font = ImageFont.truetype(fnt, int((70 / 640) * i_width))
     if ";" in text:
         upper_text, lower_text = text.split(";")

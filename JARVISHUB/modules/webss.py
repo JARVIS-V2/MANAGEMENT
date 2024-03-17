@@ -1,8 +1,8 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from scenario import pgram
-from scenario.utils.errors import capture_err
+from JARVISHUB import pgram
+from JARVISHUB.utils.errors import capture_err
 
 @pgram.on_message(filters.command("webss"))
 @capture_err

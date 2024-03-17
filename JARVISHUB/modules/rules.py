@@ -1,9 +1,9 @@
 from typing import Optional
 
-import scenario.modules.sql.rules_sql as sql
-from scenario import dispatcher
-from scenario.modules.helper_funcs.chat_status import user_admin
-from scenario.modules.helper_funcs.string_handling import markdown_parser
+import JARVISHUB.modules.sql.rules_sql as sql
+from JARVISHUB import dispatcher
+from JARVISHUB.modules.helper_funcs.chat_status import user_admin
+from JARVISHUB.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,

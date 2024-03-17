@@ -15,25 +15,25 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html, escape_markdown
 
-from scenario import dispatcher, LOGGER, DRAGONS
-from scenario.modules.disable import DisableAbleCommandHandler
-from scenario.modules.helper_funcs.handlers import MessageHandlerChecker
-from scenario.modules.helper_funcs.chat_status import user_admin
-from scenario.modules.helper_funcs.extraction import extract_text
-from scenario.modules.helper_funcs.filters import CustomFilters
-from scenario.modules.helper_funcs.misc import build_keyboard_parser
-from scenario.modules.helper_funcs.msg_types import get_filter_type
-from scenario.modules.helper_funcs.string_handling import (
+from JARVISHUB import dispatcher, LOGGER, DRAGONS
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
+from JARVISHUB.modules.helper_funcs.handlers import MessageHandlerChecker
+from JARVISHUB.modules.helper_funcs.chat_status import user_admin
+from JARVISHUB.modules.helper_funcs.extraction import extract_text
+from JARVISHUB.modules.helper_funcs.filters import CustomFilters
+from JARVISHUB.modules.helper_funcs.misc import build_keyboard_parser
+from JARVISHUB.modules.helper_funcs.msg_types import get_filter_type
+from JARVISHUB.modules.helper_funcs.string_handling import (
     split_quotes,
     button_markdown_parser,
     escape_invalid_curly_brackets,
     markdown_to_html,
 )
-from scenario.modules.sql import cust_filters_sql as sql
+from JARVISHUB.modules.sql import cust_filters_sql as sql
 
-from scenario.modules.connection import connected
+from JARVISHUB.modules.connection import connected
 
-from scenario.modules.helper_funcs.alternate import send_message, typing_action
+from JARVISHUB.modules.helper_funcs.alternate import send_message, typing_action
 
 HANDLER_GROUP = 10
 

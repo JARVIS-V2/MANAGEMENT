@@ -3,7 +3,7 @@ import threading
 from sqlalchemy import Column, ForeignKey, String, UnicodeText, UniqueConstraint, func
 from sqlalchemy.sql.sqltypes import BigInteger
 
-from scenario import dispatcher
+from JARVISHUB import dispatcher
 from . import BASE, SESSION
 
 

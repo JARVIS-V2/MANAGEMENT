@@ -4,9 +4,9 @@ from traceback import format_exc
 from pyrogram import filters
 from pyrogram.types import Message
 
-from scenario import arq
-from scenario.utils.errors import capture_err
-from scenario import pgram, BOT_USERNAME
+from JARVISHUB import arq
+from JARVISHUB.utils.errors import capture_err
+from JARVISHUB import pgram, BOT_USERNAME
 
 
 

@@ -1,7 +1,7 @@
 from gogoanimeapi import gogoanime as anime
 from telethon import Button, events
 
-from scenario import telethn
+from JARVISHUB import telethn
 
 
 @telethn.on(events.NewMessage(pattern="^/gogo ?(.*)"))

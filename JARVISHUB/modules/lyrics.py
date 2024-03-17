@@ -10,9 +10,9 @@ from tswift import Song
 from youtubesearchpython import SearchVideos
 from telegram import Message
 
-from scenario.utils.pluginhelp import get_text, progress
-from scenario import pgram, GENIUS_API_TOKEN, BOT_USERNAME, arq
-from scenario.modules.disable import DisableAbleCommandHandler
+from JARVISHUB.utils.pluginhelp import get_text, progress
+from JARVISHUB import pgram, GENIUS_API_TOKEN, BOT_USERNAME, arq
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
 
 
 async def lyrics_func(answers, text):

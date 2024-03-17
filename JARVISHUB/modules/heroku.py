@@ -4,8 +4,8 @@ import os
 import heroku3
 import requests
 
-from scenario import telethn, HEROKU_APP_NAME, HEROKU_API_KEY, OWNER_ID
-from scenario.events import register
+from JARVISHUB import telethn, HEROKU_APP_NAME, HEROKU_API_KEY, OWNER_ID
+from JARVISHUB.events import register
 
 heroku_api = "https://api.heroku.com"
 Heroku = heroku3.from_key(HEROKU_API_KEY)

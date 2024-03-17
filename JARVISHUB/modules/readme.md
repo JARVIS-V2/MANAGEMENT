@@ -1,9 +1,9 @@
-# Scenario Example plugin format
+# JARVISHUB Example plugin format
 
 ## Advanced: Pyrogram
 ```python3
 from pyrogram import filters
-from scenario import pgram
+from JARVISHUB import pgram
 
 @pgram.on_message(filters.command("kick"))
 async def hmm(_, message):
@@ -20,8 +20,8 @@ __help__ = """
 
 ## Advanced: Telethon
 ```python3
-from scenario import telethn
-from scenario.events import register
+from JARVISHUB import telethn
+from JARVISHUB.events import register
 
 @register(pattern="^/ban$")
 async def _(event):
@@ -37,7 +37,7 @@ __help__ = """
 
 ## Advanced: PTB
 ```python3
-from scenario import dispatcher
+from JARVISHUB import dispatcher
 from telegram import Update, ParseMode
 from telegram.ext import CallbackContext, CommandHandler
 

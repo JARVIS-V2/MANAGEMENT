@@ -1,8 +1,8 @@
 import aiohttp
 
 from pyrogram import filters
-from scenario import pgram
-from scenario.utils.errors import capture_err
+from JARVISHUB import pgram
+from JARVISHUB.utils.errors import capture_err
 
 @pgram.on_message(filters.command('github'))
 @capture_err

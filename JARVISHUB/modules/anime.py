@@ -12,9 +12,9 @@ from telegram.utils.helpers import mention_html
 from pyrogram import filters
 from bs4 import BeautifulSoup
 
-from scenario.modules.helper_funcs.alternate import typing_action
-from scenario.modules.disable import DisableAbleCommandHandler
-from scenario import OWNER_ID, REDIS, dispatcher, pgram
+from JARVISHUB.modules.helper_funcs.alternate import typing_action
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
+from JARVISHUB import OWNER_ID, REDIS, dispatcher, pgram
 
 
 kaizoku_btn = "Kaizoku ☠️"

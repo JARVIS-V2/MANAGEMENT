@@ -5,8 +5,8 @@ from jikanpy.exceptions import APIException
 from telegram import Message, Chat, User, ParseMode, Update, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import CallbackContext, CommandHandler, Filters, CallbackQueryHandler, run_async
 
-from scenario import dispatcher, REDIS
-from scenario.modules.disable import DisableAbleCommandHandler
+from JARVISHUB import dispatcher, REDIS
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
 
 jikan = Jikan()
 

@@ -2,7 +2,7 @@ import os
 import html
 import nekos
 import requests
-import scenario.modules.sql.nsfw_sql as sql
+import JARVISHUB.modules.sql.nsfw_sql as sql
 
 from time import sleep
 from PIL import Image
@@ -11,10 +11,10 @@ from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.ext import CommandHandler, run_async, CallbackContext
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
-from scenario import dispatcher, updater
-from scenario.modules.log_channel import gloggable
-from scenario.modules.helper_funcs.chat_status import user_admin
-from scenario.modules.helper_funcs.filters import CustomFilters
+from JARVISHUB import dispatcher, updater
+from JARVISHUB.modules.log_channel import gloggable
+from JARVISHUB.modules.helper_funcs.chat_status import user_admin
+from JARVISHUB.modules.helper_funcs.filters import CustomFilters
 
 @user_admin
 @gloggable

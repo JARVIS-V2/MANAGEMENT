@@ -2,7 +2,7 @@ from time import perf_counter
 from functools import wraps
 from cachetools import TTLCache
 from threading import RLock
-from scenario import (
+from JARVISHUB import (
     DEL_CMDS,
     DEV_USERS,
     DRAGONS,
@@ -429,6 +429,6 @@ def connection_status(func):
 
     return connected_status
 
-from scenario.modules import connection
+from JARVISHUB.modules import connection
 
 connected = connection.connected

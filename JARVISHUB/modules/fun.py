@@ -7,15 +7,15 @@ import requests as r
 import urllib.request
 import os
 
-import scenario.modules.fun_strings as fun_strings
+import JARVISHUB.modules.fun_strings as fun_strings
 
 from pyrogram import filters
 from pathlib import Path
-from scenario import DEMONS, DRAGONS, pgram as bot, dispatcher, BOT_USERNAME, BOT_NAME
-from scenario.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
-from scenario.modules.helper_funcs.chat_status import is_user_admin
-from scenario.modules.helper_funcs.alternate import typing_action
-from scenario.modules.helper_funcs.extraction import extract_user
+from JARVISHUB import DEMONS, DRAGONS, pgram as bot, dispatcher, BOT_USERNAME, BOT_NAME
+from JARVISHUB.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
+from JARVISHUB.modules.helper_funcs.chat_status import is_user_admin
+from JARVISHUB.modules.helper_funcs.alternate import typing_action
+from JARVISHUB.modules.helper_funcs.extraction import extract_user
 from telegram import ChatPermissions, ParseMode, Update, Bot
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async, Filters
@@ -294,7 +294,7 @@ def slap(update: Update, context: CallbackContext):
     user_id = extract_user(message, args)
 
     if user_id == bot.id:
-        temp = random.choice(fun_strings.SLAP_scenario_TEMPLATES)
+        temp = random.choice(fun_strings.SLAP_JARVISHUB_TEMPLATES)
 
         if isinstance(temp, list):
             if temp[2] == "tmute":

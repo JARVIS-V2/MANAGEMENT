@@ -1,8 +1,8 @@
 import time
 
 from telethon import events
-from scenario import telethn
-from scenario.modules.helper_funcs.telethn.chatstatus import (
+from JARVISHUB import telethn
+from JARVISHUB.modules.helper_funcs.telethn.chatstatus import (
     can_delete_messages,
     user_is_admin,
 )

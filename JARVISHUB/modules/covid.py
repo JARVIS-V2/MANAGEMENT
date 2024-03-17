@@ -13,8 +13,8 @@ from typing import List
 from telegram import ParseMode, InputMediaPhoto, Update, TelegramError, ChatAction
 from telegram.ext import CommandHandler, run_async, CallbackContext
 
-from scenario import dispatcher
-from scenario.modules.disable import DisableAbleCommandHandler
+from JARVISHUB import dispatcher
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
 
 
 def covid(update: Update, context: CallbackContext):

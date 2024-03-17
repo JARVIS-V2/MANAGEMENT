@@ -6,10 +6,10 @@ from pyrogram.types import (
     Message,
 )
 
-from scenario import BOT_NAME
+from JARVISHUB import BOT_NAME
 
 # By @TroJanzHEX
-from scenario.utils.resources.ImageEditor.edit_1 import (  # pylint:disable=import-error
+from JARVISHUB.utils.resources.ImageEditor.edit_1 import (  # pylint:disable=import-error
     black_white,
     box_blur,
     bright,
@@ -17,7 +17,7 @@ from scenario.utils.resources.ImageEditor.edit_1 import (  # pylint:disable=impo
     mix,
     normal_blur,
 )
-from scenario.utils.resources.ImageEditor.edit_2 import (  # pylint:disable=import-error
+from JARVISHUB.utils.resources.ImageEditor.edit_2 import (  # pylint:disable=import-error
     cartoon,
     circle_with_bg,
     circle_without_bg,
@@ -27,13 +27,13 @@ from scenario.utils.resources.ImageEditor.edit_2 import (  # pylint:disable=impo
     sepia_mode,
     sticker,
 )
-from scenario.utils.resources.ImageEditor.edit_3 import (  # pylint:disable=import-error
+from JARVISHUB.utils.resources.ImageEditor.edit_3 import (  # pylint:disable=import-error
     black_border,
     blue_border,
     green_border,
     red_border,
 )
-from scenario.utils.resources.ImageEditor.edit_4 import (  # pylint:disable=import-error
+from JARVISHUB.utils.resources.ImageEditor.edit_4 import (  # pylint:disable=import-error
     inverted,
     removebg_plain,
     removebg_sticker,
@@ -43,7 +43,7 @@ from scenario.utils.resources.ImageEditor.edit_4 import (  # pylint:disable=impo
     rotate_270,
     round_sticker,
 )
-from scenario.utils.resources.ImageEditor.edit_5 import (  # pylint:disable=import-error
+from JARVISHUB.utils.resources.ImageEditor.edit_5 import (  # pylint:disable=import-error
     normalglitch_1,
     normalglitch_2,
     normalglitch_3,
@@ -55,7 +55,7 @@ from scenario.utils.resources.ImageEditor.edit_5 import (  # pylint:disable=impo
     scanlineglitch_4,
     scanlineglitch_5,
 )
-from scenario import pgram
+from JARVISHUB import pgram
 
 lel = 00000000
 # pylint:disable=import-error

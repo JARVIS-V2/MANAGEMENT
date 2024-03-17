@@ -5,8 +5,8 @@ from typing import Union
 from sqlalchemy import Boolean, Column, Integer, String, UnicodeText
 from sqlalchemy.sql.sqltypes import BigInteger
 
-from scenario.modules.helper_funcs.msg_types import Types
-from scenario.modules.sql import BASE, SESSION
+from JARVISHUB.modules.helper_funcs.msg_types import Types
+from JARVISHUB.modules.sql import BASE, SESSION
 
 DEFAULT_WELCOME = "Hey {first}, how are you?"
 DEFAULT_GOODBYE = "Nice knowing ya!"

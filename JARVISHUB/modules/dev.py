@@ -5,10 +5,10 @@ import sys
 from contextlib import suppress
 from time import sleep
 
-import scenario
+import JARVISHUB
 
-from scenario import dispatcher
-from scenario.modules.helper_funcs.chat_status import dev_plus
+from JARVISHUB import dispatcher
+from JARVISHUB.modules.helper_funcs.chat_status import dev_plus
 from telegram import TelegramError, Update
 from telegram.error import Unauthorized
 from telegram.ext import CallbackContext, CommandHandler, run_async
@@ -17,12 +17,12 @@ from telegram.ext import CallbackContext, CommandHandler, run_async
 def allow_groups(update: Update, context: CallbackContext):
     args = context.args
     if not args:
-        update.effective_message.reply_text(f"Current state: {scenario.ALLOW_CHATS}")
+        update.effective_message.reply_text(f"Current state: {JARVISHUB.ALLOW_CHATS}")
         return
     if args[0].lower() in ["off", "no"]:
-        scenario.ALLOW_CHATS = True
+        JARVISHUB.ALLOW_CHATS = True
     elif args[0].lower() in ["yes", "on"]:
-        scenario.ALLOW_CHATS = False
+        JARVISHUB.ALLOW_CHATS = False
     else:
         update.effective_message.reply_text("Format: /lockdown Yes/No or Off/On")
         return

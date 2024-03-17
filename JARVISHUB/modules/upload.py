@@ -7,9 +7,9 @@ import traceback
 import aiohttp
 from telethon import events
 
-from scenario import BOT_USERNAME, telethn, TEMP_DOWNLOAD_DIRECTORY, SUPPORT_CHAT
-from scenario.modules.urluploader import download_file
-from scenario.utils.pluginhelpers import humanbytes, progress
+from JARVISHUB import BOT_USERNAME, telethn, TEMP_DOWNLOAD_DIRECTORY, SUPPORT_CHAT
+from JARVISHUB.modules.urluploader import download_file
+from JARVISHUB.utils.pluginhelpers import humanbytes, progress
 
 def get_date_in_two_weeks():
     """

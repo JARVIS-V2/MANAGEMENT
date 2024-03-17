@@ -6,19 +6,19 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-import scenario.modules.sql.blacklist_sql as sql
-from scenario import dispatcher, LOGGER
-from scenario.modules.disable import DisableAbleCommandHandler
-from scenario.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from scenario.modules.helper_funcs.extraction import extract_text
-from scenario.modules.helper_funcs.misc import split_message
-from scenario.modules.log_channel import loggable
-from scenario.modules.warns import warn
-from scenario.modules.helper_funcs.string_handling import extract_time
-from scenario.modules.connection import connected
-from scenario.modules.redis.approvals_redis import is_approved
+import JARVISHUB.modules.sql.blacklist_sql as sql
+from JARVISHUB import dispatcher, LOGGER
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
+from JARVISHUB.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from JARVISHUB.modules.helper_funcs.extraction import extract_text
+from JARVISHUB.modules.helper_funcs.misc import split_message
+from JARVISHUB.modules.log_channel import loggable
+from JARVISHUB.modules.warns import warn
+from JARVISHUB.modules.helper_funcs.string_handling import extract_time
+from JARVISHUB.modules.connection import connected
+from JARVISHUB.modules.redis.approvals_redis import is_approved
 
-from scenario.modules.helper_funcs.alternate import send_message, typing_action
+from JARVISHUB.modules.helper_funcs.alternate import send_message, typing_action
 
 BLACKLIST_GROUP = 11
 

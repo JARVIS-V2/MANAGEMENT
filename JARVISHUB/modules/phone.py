@@ -4,7 +4,7 @@ import requests
 from telethon import types
 from telethon.tl import functions
 
-from scenario.events import register,telethn
+from JARVISHUB.events import register,telethn
 
 
 async def is_register_admin(chat, user):

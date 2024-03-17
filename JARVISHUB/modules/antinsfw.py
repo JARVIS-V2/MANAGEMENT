@@ -1,10 +1,10 @@
 from os import remove
 from pyrogram import filters
 
-from scenario import DRAGONS, BOT_USERNAME, arq, pgram
-from scenario.utils.errors import capture_err
-from scenario.utils.permissions import adminsOnly
-from scenario.modules.mongo.nsfw_mongo import is_nsfw_on, nsfw_off, nsfw_on
+from JARVISHUB import DRAGONS, BOT_USERNAME, arq, pgram
+from JARVISHUB.utils.errors import capture_err
+from JARVISHUB.utils.permissions import adminsOnly
+from JARVISHUB.modules.mongo.nsfw_mongo import is_nsfw_on, nsfw_off, nsfw_on
 
 
 async def get_file_id_from_message(message):

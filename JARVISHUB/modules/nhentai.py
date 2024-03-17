@@ -7,8 +7,8 @@ from pyrogram.types import (InlineKeyboardMarkup,
                             InputTextMessageContent
                             )
 
-from scenario import pgram, telegraph
-from scenario.utils.errors import capture_err
+from JARVISHUB import pgram, telegraph
+from JARVISHUB.utils.errors import capture_err
 
 
 @pgram.on_message(~filters.me & filters.command('nhentai', prefixes='/'), group=8)
@@ -67,7 +67,7 @@ def nhentai_data(noombers):
     post = telegraph.create_page(
         f"{title}",
         html_content=post_content,
-        author_name="@scenario", 
-        author_url="https://t.me/scenario"
+        author_name="@JARVISHUB", 
+        author_url="https://t.me/JARVISHUB"
     )
     return title,tags,artist,total_pages,post['url'],links[0]

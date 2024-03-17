@@ -24,9 +24,9 @@ from search_engine_parser import GoogleSearch
 from tswift import Song
 from youtubesearchpython import VideosSearch
 
-from scenario.utils.inlinehelper import *
-from scenario.utils.pluginhelpers import fetch, json_prettify
-from scenario import pgram, OPENWEATHERMAP_ID, TIME_API_KEY, BOT_USERNAME, SUPPORT_CHAT
+from JARVISHUB.utils.inlinehelper import *
+from JARVISHUB.utils.pluginhelpers import fetch, json_prettify
+from JARVISHUB import pgram, OPENWEATHERMAP_ID, TIME_API_KEY, BOT_USERNAME, SUPPORT_CHAT
 
 dictionary = PyDictionary()
 

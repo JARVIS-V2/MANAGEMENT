@@ -15,9 +15,9 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
-import scenario.modules.sql.global_bans_sql as sql
-from scenario.modules.sql.users_sql import get_user_com_chats
-from scenario import (
+import JARVISHUB.modules.sql.global_bans_sql as sql
+from JARVISHUB.modules.sql.users_sql import get_user_com_chats
+from JARVISHUB import (
     DEV_USERS,
     EVENT_LOGS,
     OWNER_ID,
@@ -31,16 +31,16 @@ from scenario import (
     sw,
     dispatcher,
 )
-from scenario.modules.helper_funcs.chat_status import (
+from JARVISHUB.modules.helper_funcs.chat_status import (
     is_user_admin,
     support_plus,
     user_admin,
 )
-from scenario.modules.helper_funcs.extraction import (
+from JARVISHUB.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from scenario.modules.helper_funcs.misc import send_to_list
+from JARVISHUB.modules.helper_funcs.misc import send_to_list
 
 GBAN_ENFORCE_GROUP = 6
 

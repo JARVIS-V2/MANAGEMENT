@@ -12,9 +12,9 @@ from telethon.errors import *
 from telethon.tl import *
 from telethon import *
 
-from scenario import DRAGONS, dispatcher, telethn as bot
-from scenario.modules.disable import DisableAbleCommandHandler
-from scenario.modules.helper_funcs.chat_status import (
+from JARVISHUB import DRAGONS, dispatcher, telethn as bot
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
+from JARVISHUB.modules.helper_funcs.chat_status import (
     bot_admin,
     can_pin,
     can_promote,
@@ -27,12 +27,12 @@ from scenario.modules.helper_funcs.chat_status import (
     can_manage_voice_chats,
 )
 
-from scenario.modules.helper_funcs.extraction import (
+from JARVISHUB.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from scenario.modules.log_channel import loggable
-from scenario.modules.helper_funcs.alternate import send_message
+from JARVISHUB.modules.log_channel import loggable
+from JARVISHUB.modules.helper_funcs.alternate import send_message
 
 async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):

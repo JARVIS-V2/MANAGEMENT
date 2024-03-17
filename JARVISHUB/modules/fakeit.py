@@ -5,8 +5,8 @@ from faker import Faker
 from faker.providers import internet
 from telethon import events
 
-from scenario.utils.pluginhelpers import is_admin
-from scenario import telethn, SUPPORT_CHAT
+from JARVISHUB.utils.pluginhelpers import is_admin
+from JARVISHUB import telethn, SUPPORT_CHAT
 
 
 @telethn.on(events.NewMessage(pattern="/fakegen$"))
@@ -51,4 +51,4 @@ async def _(event):
         fole = "FRIDAYOT.jpg"
         await telethn.send_file(event.chat_id, fole, caption=captin)
         await event.delete()
-        os.system("rm ./scenario.jpg ")
+        os.system("rm ./JARVISHUB.jpg ")

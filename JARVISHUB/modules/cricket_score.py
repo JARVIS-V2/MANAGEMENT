@@ -3,7 +3,7 @@ import urllib.request
 from bs4 import BeautifulSoup
 from telethon import events
 from telethon.tl import functions, types
-from scenario import telethn
+from JARVISHUB import telethn
 
 
 async def is_register_admin(chat, user):

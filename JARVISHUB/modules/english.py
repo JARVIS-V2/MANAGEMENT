@@ -11,8 +11,8 @@ from typing import Optional
 from PyDictionary import PyDictionary
 from telegram import Message
 
-from scenario import telethn
-from scenario.events import register
+from JARVISHUB import telethn
+from JARVISHUB.events import register
 
 
 API_KEY = "6ae0c3a0-afdc-4532-a810-82ded0054236"

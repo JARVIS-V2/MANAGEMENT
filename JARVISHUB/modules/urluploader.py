@@ -2,9 +2,9 @@ import os
 import time
 import aiohttp
 
-from scenario.utils.pluginhelpers import humanbytes, time_formatter
+from JARVISHUB.utils.pluginhelpers import humanbytes, time_formatter
 
-from scenario import BOT_USERNAME
+from JARVISHUB import BOT_USERNAME
 
 
 async def download_file(url, file_name, message, start_time, bot):
@@ -29,7 +29,7 @@ async def download_coroutine(session, url, file_name, event, start, bot):
 **URL:** {}
 **File Name:** {}
 **File Size:** {}
-**© @scenario**""".format(
+**© @JARVISHUB**""".format(
                 url,
                 os.path.basename(file_name).replace("%20", " "),
                 humanbytes(total_length),

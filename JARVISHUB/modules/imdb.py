@@ -5,8 +5,8 @@ import requests
 from telethon import types
 from telethon.tl import functions
 
-from scenario.events import register
-from scenario import telethn
+from JARVISHUB.events import register
+from JARVISHUB import telethn
 
 langi = "en"
 

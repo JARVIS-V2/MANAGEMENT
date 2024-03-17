@@ -3,10 +3,10 @@ import time
 import requests
 import speedtest
 
-from scenario import DEV_USERS, dispatcher, OWNER_ID
-from scenario.modules.disable import DisableAbleCommandHandler
-from scenario.modules.helper_funcs.chat_status import dev_plus
-from scenario.modules.helper_funcs.alternate import typing_action, send_action
+from JARVISHUB import DEV_USERS, dispatcher, OWNER_ID
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
+from JARVISHUB.modules.helper_funcs.chat_status import dev_plus
+from JARVISHUB.modules.helper_funcs.alternate import typing_action, send_action
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.ext import CallbackContext, CallbackQueryHandler, run_async, Filters, CommandHandler

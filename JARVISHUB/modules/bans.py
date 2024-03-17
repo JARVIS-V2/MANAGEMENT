@@ -14,10 +14,10 @@ from telegram.utils.helpers import mention_html
 from typing import Optional, List
 from telegram import TelegramError
 
-import scenario.modules.sql.users_sql as sql
-from scenario.modules.disable import DisableAbleCommandHandler
-from scenario.modules.helper_funcs.filters import CustomFilters
-from scenario import (
+import JARVISHUB.modules.sql.users_sql as sql
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
+from JARVISHUB.modules.helper_funcs.filters import CustomFilters
+from JARVISHUB import (
     DEV_USERS,
     LOGGER,
     OWNER_ID,
@@ -27,7 +27,7 @@ from scenario import (
     WOLVES,
     dispatcher,
 )
-from scenario.modules.helper_funcs.chat_status import (
+from JARVISHUB.modules.helper_funcs.chat_status import (
     user_admin_no_reply,
     bot_admin,
     can_restrict,
@@ -40,9 +40,9 @@ from scenario.modules.helper_funcs.chat_status import (
     can_delete,
     dev_plus,
 )
-from scenario.modules.helper_funcs.extraction import extract_user_and_text
-from scenario.modules.helper_funcs.string_handling import extract_time
-from scenario.modules.log_channel import gloggable, loggable
+from JARVISHUB.modules.helper_funcs.extraction import extract_user_and_text
+from JARVISHUB.modules.helper_funcs.string_handling import extract_time
+from JARVISHUB.modules.log_channel import gloggable, loggable
 
 
 

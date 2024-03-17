@@ -3,8 +3,8 @@ import threading
 
 from sqlalchemy import Boolean, Column, Integer, String, UnicodeText, distinct, func
 
-from scenario.modules.helper_funcs.msg_types import Types
-from scenario.modules.sql import BASE, SESSION
+from JARVISHUB.modules.helper_funcs.msg_types import Types
+from JARVISHUB.modules.sql import BASE, SESSION
 
 
 class Notes(BASE):

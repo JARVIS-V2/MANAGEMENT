@@ -5,8 +5,8 @@ import requests
 from datetime import datetime
 from telethon import types
 from telethon.tl import functions
-from scenario.events import register
-from scenario import TEMP_DOWNLOAD_DIRECTORY, REM_BG_API_KEY, telethn, SUPPORT_CHAT
+from JARVISHUB.events import register
+from JARVISHUB import TEMP_DOWNLOAD_DIRECTORY, REM_BG_API_KEY, telethn, SUPPORT_CHAT
 
 async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):

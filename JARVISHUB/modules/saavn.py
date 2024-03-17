@@ -4,8 +4,8 @@ import wget
 
 from pyrogram import filters
 
-from scenario import pgram, BOT_USERNAME
-from scenario.utils.saavnhelp import get_arg
+from JARVISHUB import pgram, BOT_USERNAME
+from JARVISHUB.utils.saavnhelp import get_arg
 
 
 @pgram.on_message(filters.command("saavn", f"saavn@{BOT_USERNAME}"))

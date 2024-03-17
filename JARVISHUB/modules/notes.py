@@ -1,17 +1,17 @@
 import re
 import ast
 import random
-import scenario.modules.sql.notes_sql as sql
+import JARVISHUB.modules.sql.notes_sql as sql
 
 from io import BytesIO
 from typing import Optional
-from scenario import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, DRAGONS
-from scenario.modules.disable import DisableAbleCommandHandler
-from scenario.modules.helper_funcs.handlers import MessageHandlerChecker
-from scenario.modules.helper_funcs.chat_status import user_admin, connection_status
-from scenario.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from scenario.modules.helper_funcs.msg_types import get_note_type
-from scenario.modules.helper_funcs.string_handling import (
+from JARVISHUB import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, DRAGONS
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
+from JARVISHUB.modules.helper_funcs.handlers import MessageHandlerChecker
+from JARVISHUB.modules.helper_funcs.chat_status import user_admin, connection_status
+from JARVISHUB.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from JARVISHUB.modules.helper_funcs.msg_types import get_note_type
+from JARVISHUB.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
 )
 from telegram import (

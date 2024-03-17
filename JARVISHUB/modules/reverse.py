@@ -11,8 +11,8 @@ from bs4 import BeautifulSoup
 from telegram import Update, InputMediaPhoto, TelegramError
 from telegram.ext import CallbackContext
 
-from scenario import dispatcher
-from scenario.modules.disable import DisableAbleCommandHandler
+from JARVISHUB import dispatcher
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
 
 opener = urllib.request.build_opener()
 useragent = "Mozilla/5.0 (Linux; Android 6.0.1; SM-G920V Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36"

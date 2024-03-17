@@ -1,7 +1,7 @@
 from telethon.tl.types import ChannelParticipantsAdmins
 
-from scenario import DRAGONS
-from scenario.modules.helper_funcs.telethn import IMMUNE_USERS, telethn
+from JARVISHUB import DRAGONS
+from JARVISHUB.modules.helper_funcs.telethn import IMMUNE_USERS, telethn
 
 
 async def user_is_ban_protected(user_id: int, message):
@@ -46,14 +46,14 @@ async def is_user_admin(user_id: int, chat_id):
     return status
 
 
-async def scenario_is_admin(chat_id: int):
+async def JARVISHUB_is_admin(chat_id: int):
     status = False
     await telethn.get_me()
     async for user in telethn.iter_participants(
         chat_id,
         filter=ChannelParticipantsAdmins,
     ):
-        if scenario.id == user.id:
+        if JARVISHUB.id == user.id:
             status = True
             break
     return status

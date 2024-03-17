@@ -2,8 +2,8 @@ import datetime
 from typing import List
 
 import requests
-from scenario import TIME_API_KEY, dispatcher
-from scenario.modules.disable import DisableAbleCommandHandler
+from JARVISHUB import TIME_API_KEY, dispatcher
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 

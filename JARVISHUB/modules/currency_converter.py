@@ -1,6 +1,6 @@
 import requests
 
-from scenario import CASH_API_KEY, dispatcher
+from JARVISHUB import CASH_API_KEY, dispatcher
 from telegram import Update, ParseMode
 from telegram.ext import CallbackContext, CommandHandler, run_async
 

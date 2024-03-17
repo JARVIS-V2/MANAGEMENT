@@ -2,9 +2,9 @@ import sre_constants
 import regex
 import telegram
 
-from scenario import LOGGER, dispatcher
-from scenario.modules.disable import DisableAbleMessageHandler
-from scenario.modules.helper_funcs.regex_helper import infinite_loop_check
+from JARVISHUB import LOGGER, dispatcher
+from JARVISHUB.modules.disable import DisableAbleMessageHandler
+from JARVISHUB.modules.helper_funcs.regex_helper import infinite_loop_check
 from telegram import Update
 from telegram.ext import CallbackContext, Filters, run_async
 

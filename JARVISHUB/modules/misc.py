@@ -1,7 +1,7 @@
-from scenario.modules.helper_funcs.chat_status import user_admin
-from scenario.modules.disable import DisableAbleCommandHandler
-from scenario import dispatcher
-from scenario.modules.helper_funcs.alternate import typing_action, send_action
+from JARVISHUB.modules.helper_funcs.chat_status import user_admin
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
+from JARVISHUB import dispatcher
+from JARVISHUB.modules.helper_funcs.alternate import typing_action, send_action
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update, ChatAction
 from telegram.ext.dispatcher import run_async
@@ -67,7 +67,7 @@ def markdown_help_sender(update: Update):
 @typing_action
 def src(update, _):
     update.effective_message.reply_text(
-        "Hey there! You can find what makes me click [here](https://github.com/TeamScenario/Scenario).",
+        "Hey there! You can find what makes me click [here](https://github.com/TeamJARVISHUB/JARVISHUB).",
         parse_mode=ParseMode.MARKDOWN,
         disable_web_page_preview=True,
     )

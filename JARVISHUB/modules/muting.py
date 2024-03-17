@@ -2,8 +2,8 @@ import html
 import re
 from typing import Optional
 
-from scenario import LOGGER, TIGERS, dispatcher
-from scenario.modules.helper_funcs.chat_status import (
+from JARVISHUB import LOGGER, TIGERS, dispatcher
+from JARVISHUB.modules.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     connection_status,
@@ -11,13 +11,13 @@ from scenario.modules.helper_funcs.chat_status import (
     user_admin,
     user_admin_no_reply,
 )
-from scenario.modules.helper_funcs.extraction import (
+from JARVISHUB.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from scenario.modules.helper_funcs.string_handling import extract_time
-from scenario.modules.log_channel import loggable
-from scenario.modules.redis.approvals_redis import is_approved
+from JARVISHUB.modules.helper_funcs.string_handling import extract_time
+from JARVISHUB.modules.log_channel import loggable
+from JARVISHUB.modules.redis.approvals_redis import is_approved
 from telegram import (
     Bot, 
     Chat, 

@@ -10,11 +10,11 @@ from telegram.ext import (
     CommandHandler,
 )
 
-import scenario.modules.sql.users_sql as sql
-from scenario.modules.disable import DisableAbleCommandHandler
-from scenario import DEV_USERS, LOGGER, OWNER_ID, dispatcher
-from scenario.modules.helper_funcs.chat_status import dev_plus, sudo_plus
-from scenario.modules.sql.users_sql import get_all_users
+import JARVISHUB.modules.sql.users_sql as sql
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
+from JARVISHUB import DEV_USERS, LOGGER, OWNER_ID, dispatcher
+from JARVISHUB.modules.helper_funcs.chat_status import dev_plus, sudo_plus
+from JARVISHUB.modules.sql.users_sql import get_all_users
 
 
 USERS_GROUP = 4

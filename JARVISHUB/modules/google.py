@@ -22,8 +22,8 @@ from telethon import *
 from telethon.tl.types import *
 
 
-from scenario import telethn, BOT_NAME
-from scenario.events import register
+from JARVISHUB import telethn, BOT_NAME
+from JARVISHUB.events import register
 
 @register(pattern="^/gps (.*)")
 async def _(event):

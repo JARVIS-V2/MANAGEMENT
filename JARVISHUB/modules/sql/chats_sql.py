@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String
 
-from scenario.modules.sql import BASE, SESSION
+from JARVISHUB.modules.sql import BASE, SESSION
 
 
 class Nightmode(BASE):

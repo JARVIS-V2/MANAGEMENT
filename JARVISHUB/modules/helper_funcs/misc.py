@@ -4,7 +4,7 @@ from typing import Dict, List
 from telegram import MAX_MESSAGE_LENGTH, Bot, InlineKeyboardButton, ParseMode, Update
 from telegram.error import TelegramError
 
-from scenario import NO_LOAD
+from JARVISHUB import NO_LOAD
 
 
 class EqInlineKeyboardButton(InlineKeyboardButton):

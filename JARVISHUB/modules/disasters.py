@@ -3,7 +3,7 @@ import json
 import os
 from typing import Optional
 
-from scenario import (
+from JARVISHUB import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -13,18 +13,18 @@ from scenario import (
     WOLVES,
     dispatcher,
 )
-from scenario.modules.helper_funcs.chat_status import (
+from JARVISHUB.modules.helper_funcs.chat_status import (
     dev_plus,
     sudo_plus,
     whitelist_plus,
 )
-from scenario.modules.helper_funcs.extraction import extract_user
-from scenario.modules.log_channel import gloggable
+from JARVISHUB.modules.helper_funcs.extraction import extract_user
+from JARVISHUB.modules.log_channel import gloggable
 from telegram import ParseMode, TelegramError, Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 from telegram.utils.helpers import mention_html
 
-ELEVATED_USERS_FILE = os.path.join(os.getcwd(), "scenario/elevated_users.json")
+ELEVATED_USERS_FILE = os.path.join(os.getcwd(), "JARVISHUB/elevated_users.json")
 
 
 def check_user_id(user_id: int, context: CallbackContext) -> Optional[str]:
@@ -505,7 +505,7 @@ def devlist(update: Update, context: CallbackContext):
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML,
     )
     true_dev = list(set(DEV_USERS) - {OWNER_ID})
-    reply = "<b>Members of TeamScenario:</b>\n"
+    reply = "<b>Members of TeamJARVISHUB:</b>\n"
     for each_user in true_dev:
         user_id = int(each_user)
         try:

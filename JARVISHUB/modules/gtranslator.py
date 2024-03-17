@@ -4,9 +4,9 @@ from gpytranslate import SyncTranslator
 from telegram import Update, ChatAction, InlineKeyboardButton, InlineKeyboardMarkup, ParseMode
 from telegram.ext import CallbackContext
 
-from scenario import dispatcher
-from scenario.modules.disable import DisableAbleCommandHandler
-from scenario.modules.helper_funcs.alternate import typing_action, send_action
+from JARVISHUB import dispatcher
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
+from JARVISHUB.modules.helper_funcs.alternate import typing_action, send_action
 
 trans = SyncTranslator()
 
@@ -71,12 +71,12 @@ def gtts(update, context):
             reply = reply.replace(x, "")
     try:
         tts = gTTS(reply)
-        tts.save("scenario.mp3")
-        with open("scenario.mp3", "rb") as speech:
+        tts.save("JARVISHUB.mp3")
+        with open("JARVISHUB.mp3", "rb") as speech:
             msg.reply_audio(speech)
     finally:
-        if os.path.isfile("Scenario.mp3"):
-            os.remove("Scenario.mp3")
+        if os.path.isfile("JARVISHUB.mp3"):
+            os.remove("JARVISHUB.mp3")
 
 
 # Open API key

@@ -10,8 +10,8 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 
 
-from scenario import TEMP_DOWNLOAD_DIRECTORY, telethn
-from scenario.events import register
+from JARVISHUB import TEMP_DOWNLOAD_DIRECTORY, telethn
+from JARVISHUB.events import register
 
 
 async def is_register_admin(chat, user):

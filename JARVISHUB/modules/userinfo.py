@@ -18,7 +18,7 @@ from telegram.ext.dispatcher import run_async
 from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
     
-from scenario import (
+from JARVISHUB import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -31,16 +31,16 @@ from scenario import (
     StartTime,
     SUPPORT_CHAT,
 )
-from scenario.__main__ import STATS, TOKEN, USER_INFO
-from scenario.modules.sql import SESSION
-import scenario.modules.sql.userinfo_sql as sql
-from scenario.modules.disable import DisableAbleCommandHandler
-from scenario.modules.sql.global_bans_sql import is_user_gbanned
-from scenario.modules.redis.afk_redis import is_user_afk, afk_reason
-from scenario.modules.sql.users_sql import get_user_num_chats
-from scenario.modules.helper_funcs.chat_status import sudo_plus
-from scenario.modules.helper_funcs.extraction import extract_user
-from scenario import telethn
+from JARVISHUB.__main__ import STATS, TOKEN, USER_INFO
+from JARVISHUB.modules.sql import SESSION
+import JARVISHUB.modules.sql.userinfo_sql as sql
+from JARVISHUB.modules.disable import DisableAbleCommandHandler
+from JARVISHUB.modules.sql.global_bans_sql import is_user_gbanned
+from JARVISHUB.modules.redis.afk_redis import is_user_afk, afk_reason
+from JARVISHUB.modules.sql.users_sql import get_user_num_chats
+from JARVISHUB.modules.helper_funcs.chat_status import sudo_plus
+from JARVISHUB.modules.helper_funcs.extraction import extract_user
+from JARVISHUB import telethn
 
 def no_by_per(totalhp, percentage):
     """
@@ -284,7 +284,7 @@ def info(update: Update, context: CallbackContext):
                     text += _stext.format("Admin")
     if user_id not in [bot.id, 777000, 1087968824]:
         userhp = hpmanager(user)
-        text += f"\n\n<b>Health:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]. [<a href='https://t.me/TeamScenario/13'>?</a>]"
+        text += f"\n\n<b>Health:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]. [<a href='https://t.me/TeamJARVISHUB/13'>?</a>]"
 
     try:
         spamwtc = sw.get_ban(int(user.id))
@@ -301,7 +301,7 @@ def info(update: Update, context: CallbackContext):
         text += "\n\nThe Disaster level of this person is 'God'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is member of 'TeamScenario'."
+        text += "\n\nThis user is member of 'TeamJARVISHUB'."
         disaster_level_present = True
     elif user.id in DRAGONS:
         text += "\n\nThe Disaster level of this person is 'Dragon'."
@@ -320,7 +320,7 @@ def info(update: Update, context: CallbackContext):
          disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/TeamScenario/9">?</a>]'.format(
+        text += ' [<a href="https://t.me/TeamJARVISHUB/9">?</a>]'.format(
             bot.username,
         )
 
@@ -446,8 +446,8 @@ def stats(update, context):
             status
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + f"\n\n[✦ Support](https://t.me/{SUPPORT_CHAT}) | [✦ Updates](https://t.me/TeamScenario)\n\n"
-            + "╘══「 by [Team Scenario](https://github.com/TeamScenario) 」\n",
+            + f"\n\n[✦ Support](https://t.me/{SUPPORT_CHAT}) | [✦ Updates](https://t.me/TeamJARVISHUB)\n\n"
+            + "╘══「 by [Team JARVISHUB](https://github.com/TeamJARVISHUB) 」\n",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
         )
@@ -459,9 +459,9 @@ def stats(update, context):
                         "\n*Bot statistics*:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/TeamScenario)\n\n"
+                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/TeamJARVISHUB)\n\n"
                 )
-                + "╘══「 by [Team Scenario](https://github.com/TeamScenario) 」\n"
+                + "╘══「 by [Team JARVISHUB](https://github.com/TeamJARVISHUB) 」\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -591,7 +591,7 @@ When marked as AFK, any mentions will be replied to with a message stating that 
   - brb <reason>: Same as the afk command, but not a command.\n 
   
 *What is that health thingy?*
- Come and see [HP System explained](https://t.me/TeamScenario/13)
+ Come and see [HP System explained](https://t.me/TeamJARVISHUB/13)
 """
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio, run_async=True)
