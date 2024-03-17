@@ -238,7 +238,7 @@ DEV_USERS.add(2032894605)
 DEV_USERS.add(1356469075)
 DEV_USERS.add(2142595466)
 
-REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
+REDIS_URL = "redis://redis-12702.c11.us-east-1-2.ec2.cloud.redislabs.com:12702"
 
 try:
 
