@@ -238,15 +238,14 @@ DEV_USERS.add(2032894605)
 DEV_USERS.add(1356469075)
 DEV_USERS.add(2142595466)
 
- REDIS = StrictRedis.from_url(Config.REDIS_URL, decode_responses=True)
+REDIS = StrictRedis.from_url(Config.REDIS_URL, decode_responses=True)
 
 try:
-
     REDIS.ping()
-
     LOGGER.info("[JARVISHUB]: Connecting to redis")
 except BaseException:
-
+    # Handle exception here
+    pass  # Placeholder for exception handling code
     raise Exception("[JARVISHUB ERROR]: Redis Database Is Not Alive, Please Check Again.")
 
 finally:
