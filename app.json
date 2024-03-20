@@ -61,7 +61,7 @@
       },
       "REDIS_URL": {
          "description": "Redis URL, get it from redis.com",
-         "required": true,
+         "required": false,
          "value": ""
       },
       "UPSTREAM_REPO": {
